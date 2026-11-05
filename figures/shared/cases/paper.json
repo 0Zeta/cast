@@ -1,0 +1,170 @@
+[
+  {
+    "id": "audio-visual_01",
+    "video_id": "avdeepfake1m/val/id00945/K6b69erklJY/00065/fake_video_fake_audio.mp4",
+    "crop": [
+      0.05333333333333323,
+      1.5466666666666669
+    ],
+    "selected_tracks": [
+      "cos",
+      "ja_B",
+      "jv_B",
+      "sync",
+      "vart_C",
+      "aart_C"
+    ],
+    "modality_labels": {
+      "audio": true,
+      "video": true
+    },
+    "media": {
+      "video": true,
+      "audio": true
+    }
+  },
+  {
+    "id": "audio-visual_04",
+    "video_id": "avdeepfake1m/val/id08581/dM1u9Xnw6Zs/00092/fake_video_fake_audio.mp4",
+    "crop": [
+      0.11333333333333329,
+      1.1866666666666668
+    ],
+    "selected_tracks": [
+      "cos",
+      "ja_B",
+      "jv_B",
+      "sync",
+      "vart_C",
+      "aart_C"
+    ],
+    "modality_labels": {
+      "audio": true,
+      "video": true
+    },
+    "media": {
+      "video": true,
+      "audio": true
+    }
+  },
+  {
+    "id": "audio-only_02",
+    "video_id": "avdeepfake1m/val/id08701/BK0NqHQvtwc/00141/real_video_fake_audio.mp4",
+    "crop": [
+      3.0533333333333332,
+      4.266666666666667
+    ],
+    "selected_tracks": [
+      "cos",
+      "ja_B",
+      "jv_B",
+      "sync",
+      "vart_C",
+      "aart_C"
+    ],
+    "modality_labels": {
+      "audio": true,
+      "video": false
+    },
+    "media": {
+      "video": true,
+      "audio": true
+    }
+  },
+  {
+    "id": "visual-only_02",
+    "video_id": "avdeepfake1m/val/id07695/5xg6sV5zXVE/00014/fake_video_real_audio.mp4",
+    "crop": [
+      1.34,
+      7.5
+    ],
+    "selected_tracks": [
+      "cos",
+      "ja_B",
+      "jv_B",
+      "sync",
+      "vart_C",
+      "aart_C"
+    ],
+    "modality_labels": {
+      "audio": false,
+      "video": true
+    },
+    "media": {
+      "video": true,
+      "audio": true
+    }
+  },
+  {
+    "id": "split_01",
+    "video_id": "avdeepfake1m/val/id00829/_tF0kVlEmjI/00266/fake_video_fake_audio.mp4",
+    "crop": [
+      0.8066666666666666,
+      3.5133333333333336
+    ],
+    "selected_tracks": [
+      "cos",
+      "ja_B",
+      "jv_B",
+      "sync",
+      "vart_C",
+      "aart_C"
+    ],
+    "modality_labels": {
+      "audio": true,
+      "video": true
+    },
+    "media": {
+      "video": true,
+      "audio": true
+    }
+  },
+  {
+    "id": "split_04",
+    "video_id": "avdeepfake1m/val/id03942/GzdR39_3R8M/00170/fake_video_fake_audio.mp4",
+    "crop": [
+      0.7,
+      6.4399999999999995
+    ],
+    "selected_tracks": [
+      "cos",
+      "ja_B",
+      "jv_B",
+      "sync",
+      "vart_C",
+      "aart_C"
+    ],
+    "modality_labels": {
+      "audio": true,
+      "video": true
+    },
+    "media": {
+      "video": true,
+      "audio": true
+    }
+  },
+  {
+    "id": "audio-visual_09",
+    "video_id": "avdeepfake1m/val/id03677/jXMVoKH1CJE/00141/fake_video_fake_audio.mp4",
+    "crop": [
+      2.0866666666666664,
+      3.2533333333333334
+    ],
+    "selected_tracks": [
+      "cos",
+      "ja_B",
+      "jv_B",
+      "sync",
+      "vart_C",
+      "aart_C"
+    ],
+    "modality_labels": {
+      "audio": true,
+      "video": true
+    },
+    "media": {
+      "video": true,
+      "audio": true
+    }
+  }
+]

@@ -1,0 +1,4 @@
+video_id,video_path,speaker_id,target,fake_segments_json
+evaluation/id00001/example-real,videos/evaluation/example-real.mp4,id00001,0,[]
+evaluation/id00002/example-fake,videos/evaluation/example-fake.mp4,id00002,1,"[[1.20, 1.72]]"
+corpus/id00003/example-genuine,videos/corpus/example-genuine.mp4,id00003,0,[]

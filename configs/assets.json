@@ -1,0 +1,68 @@
+{
+  "av_hubert": {
+    "repository": "https://github.com/facebookresearch/av_hubert.git",
+    "commit": "258fb50e155134eec2c4b49c2ae8de267075fd18",
+    "fairseq_commit": "afc77bdf4bb51453ce76f1572ef2ee6ddcda8eeb",
+    "model_page": "https://facebookresearch.github.io/av_hubert/",
+    "license": "https://github.com/facebookresearch/av_hubert/blob/258fb50e155134eec2c4b49c2ae8de267075fd18/LICENSE"
+  },
+  "external_files": [
+    {
+      "id": "avhubert_primary",
+      "filename": "large_vox_iter5.pt",
+      "url": "https://dl.fbaipublicfiles.com/avhubert/model/lrs3_vox/clean-pretrain/large_vox_iter5.pt"
+    },
+    {
+      "id": "avhubert_auxiliary",
+      "filename": "self_large_vox_433h.pt",
+      "url": "https://dl.fbaipublicfiles.com/avhubert/model/lrs3_vox/vsr/self_large_vox_433h.pt"
+    },
+    {
+      "id": "dlib_cnn_face_detector",
+      "filename": "mmod_human_face_detector.dat",
+      "url": "https://dlib.net/files/mmod_human_face_detector.dat.bz2",
+      "download_compression": "bzip2"
+    },
+    {
+      "id": "dlib_landmark_predictor",
+      "filename": "shape_predictor_68_face_landmarks.dat",
+      "url": "https://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2",
+      "download_compression": "bzip2"
+    },
+    {
+      "id": "avhubert_mean_face",
+      "filename": "20words_mean_face.npy",
+      "url": "https://raw.githubusercontent.com/mpc001/Lipreading_using_Temporal_Convolutional_Networks/master/preprocessing/20words_mean_face.npy"
+    }
+  ],
+  "bundled_files": [
+    {
+      "id": "prediction_heads",
+      "path": "models/checkpoints/prediction_heads.pt"
+    },
+    {
+      "id": "visual_artifact_head",
+      "path": "models/checkpoints/visual_artifact_head.pt"
+    },
+    {
+      "id": "audio_artifact_head",
+      "path": "models/checkpoints/audio_artifact_head.pt"
+    },
+    {
+      "id": "visual_artifact_crossfit_0",
+      "path": "models/checkpoints/visual_artifact_crossfit_0.pt"
+    },
+    {
+      "id": "visual_artifact_crossfit_1",
+      "path": "models/checkpoints/visual_artifact_crossfit_1.pt"
+    },
+    {
+      "id": "audio_artifact_crossfit_0",
+      "path": "models/checkpoints/audio_artifact_crossfit_0.pt"
+    },
+    {
+      "id": "audio_artifact_crossfit_1",
+      "path": "models/checkpoints/audio_artifact_crossfit_1.pt"
+    }
+  ]
+}

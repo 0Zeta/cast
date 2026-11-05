@@ -1,0 +1,16 @@
+{
+  "features": [
+    "adjusted_score"
+  ],
+  "mu": [
+    0.0
+  ],
+  "sd": [
+    1.0
+  ],
+  "w": [
+    0.0,
+    1.0
+  ],
+  "role": "orders proposals by their emitted score; no fitted parameter"
+}

@@ -1,0 +1,77 @@
+{
+  "audio_model": "vits",
+  "clip_scores": {
+    "p_final_mix": 0.02733970079213508,
+    "px_final_mix": 0.03753351206434316,
+    "s_clip": 6.648561854663786
+  },
+  "container_duration_s": 11.56,
+  "display_window_s": {
+    "end": 6.4399999999999995,
+    "start": 0.7
+  },
+  "duration_s": 11.56,
+  "fps": 25.0,
+  "genuine_flanks_s": {
+    "after": 6.760000000000001,
+    "before": 2.34
+  },
+  "ground_truth": {
+    "end_s": 4.8,
+    "interval_semantics": "half-open seconds",
+    "n_intervals": 2,
+    "start_s": 2.34
+  },
+  "ground_truth_intervals": [
+    {
+      "end_s": 2.7,
+      "start_s": 2.34
+    },
+    {
+      "end_s": 4.8,
+      "start_s": 4.46
+    }
+  ],
+  "logical_video_id": "id03942/GzdR39_3R8M/00170/fake_video_fake_audio.mp4",
+  "minimum_genuine_flank_s": 0.0,
+  "modality_labels": {
+    "audio": true,
+    "video": true
+  },
+  "modify_type": "both_modified",
+  "n_frames": 289,
+  "proposal": {
+    "end_f": 71,
+    "end_s": 2.88,
+    "interval_semantics": "inclusive frames; half-open seconds",
+    "iou": 0.6000000834465027,
+    "rank": 0,
+    "score": -0.5524115159995153,
+    "start_f": 57,
+    "start_s": 2.28
+  },
+  "schema_version": 1,
+  "score_groups": [
+    "cos",
+    "ja_B",
+    "jv_B",
+    "sync",
+    "vart_C",
+    "aart_C"
+  ],
+  "selection_query": {
+    "count": 3,
+    "ground_truth_count": 2,
+    "maximum_top1_iou": 1.0,
+    "minimum_genuine_flank_s": 0.0,
+    "minimum_ground_truth_s": 0.3,
+    "minimum_top1_iou": 0.5,
+    "modify_type": "both_modified",
+    "name": "split_forgery_two_intervals_v2",
+    "require_proposal_in_view": true
+  },
+  "selection_seed": "supp-score-split-forgery-v1",
+  "id": "split_04",
+  "video_id": "id03942/GzdR39_3R8M/00170/fake_video_fake_audio.mp4",
+  "method": "C22"
+}

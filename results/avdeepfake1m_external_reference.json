@@ -1,0 +1,1588 @@
+{
+  "dataset": "AV-Deepfake1M",
+  "protocol": "external_reference",
+  "localization": {
+    "evaluator": {
+      "ap_thresholds": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.75,
+        0.8,
+        0.9,
+        0.95
+      ],
+      "ar_budgets": [
+        50,
+        30,
+        20,
+        10,
+        5,
+        2,
+        1
+      ],
+      "ar_definition": "mean recall over ar_iou_grid at each proposal budget",
+      "ar_iou_grid": [
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95
+      ],
+      "arithmetic": "official_f32_unrolled_v1",
+      "avg_map": "mean of AP@0.1 through AP@0.7",
+      "iou_rule": "continuous seconds-domain IoU; strict > comparison"
+    },
+    "overall": {
+      "point": {
+        "ap@0.1": 0.6377261877059937,
+        "ap@0.2": 0.5919821262359619,
+        "ap@0.3": 0.5448577404022217,
+        "ap@0.4": 0.4894654154777527,
+        "ap@0.5": 0.4223203659057617,
+        "ap@0.6": 0.34402328729629517,
+        "ap@0.7": 0.2121845930814743,
+        "ap@0.75": 0.138703852891922,
+        "ap@0.8": 0.07862812280654907,
+        "ap@0.9": 0.007207641843706369,
+        "ap@0.95": 0.0007403397466987371,
+        "ar@1": 0.2206236869096756,
+        "ar@10": 0.45463985204696655,
+        "ar@2": 0.3057534098625183,
+        "ar@20": 0.4877140522003174,
+        "ar@30": 0.4944811761379242,
+        "ar@5": 0.3991263210773468,
+        "ar@50": 0.4945705533027649,
+        "avg_map_0107": 0.46322281658649445
+      },
+      "population": {
+        "n_clips": 57315
+      }
+    },
+    "strata": {
+      "modify_type:audio_modified": {
+        "definition": "all scored genuine clips plus fake modify_type=audio_modified",
+        "point": {
+          "ap@0.1": 0.7549296021461487,
+          "ap@0.2": 0.723739504814148,
+          "ap@0.3": 0.6832253336906433,
+          "ap@0.4": 0.6273549795150757,
+          "ap@0.5": 0.5551763772964478,
+          "ap@0.6": 0.4631165862083435,
+          "ap@0.7": 0.2974678874015808,
+          "ap@0.75": 0.20175819098949432,
+          "ap@0.8": 0.1159432902932167,
+          "ap@0.9": 0.011733699589967728,
+          "ap@0.95": 0.0013480960624292493,
+          "ar@1": 0.292243629693985,
+          "ar@10": 0.5424361228942871,
+          "ar@2": 0.3949486017227173,
+          "ar@20": 0.5613498091697693,
+          "ar@30": 0.5625520944595337,
+          "ar@5": 0.4932771325111389,
+          "ar@50": 0.5625520944595337,
+          "avg_map_0107": 0.5864300387246268
+        },
+        "population": {
+          "n_clips": 28505,
+          "n_fake": 14276,
+          "n_gt_segments": 18965,
+          "n_real": 14229
+        }
+      },
+      "modify_type:both_modified": {
+        "definition": "all scored genuine clips plus fake modify_type=both_modified",
+        "point": {
+          "ap@0.1": 0.7482465505599976,
+          "ap@0.2": 0.7015442848205566,
+          "ap@0.3": 0.6500043272972107,
+          "ap@0.4": 0.5858006477355957,
+          "ap@0.5": 0.503373384475708,
+          "ap@0.6": 0.4076504707336426,
+          "ap@0.7": 0.24853572249412537,
+          "ap@0.75": 0.16029873490333557,
+          "ap@0.8": 0.09231838583946228,
+          "ap@0.9": 0.007856478914618492,
+          "ap@0.95": 0.0007309871143661439,
+          "ar@1": 0.2613285481929779,
+          "ar@10": 0.5208430886268616,
+          "ar@2": 0.36064761877059937,
+          "ar@20": 0.5437964797019958,
+          "ar@30": 0.5456468462944031,
+          "ar@5": 0.46559077501296997,
+          "ar@50": 0.5456468462944031,
+          "avg_map_0107": 0.5493079125881195
+        },
+        "population": {
+          "n_clips": 28737,
+          "n_fake": 14508,
+          "n_gt_segments": 19239,
+          "n_real": 14229
+        }
+      },
+      "modify_type:visual_modified": {
+        "definition": "all scored genuine clips plus fake modify_type=visual_modified",
+        "point": {
+          "ap@0.1": 0.2701535224914551,
+          "ap@0.2": 0.21501095592975616,
+          "ap@0.3": 0.17254066467285156,
+          "ap@0.4": 0.13637405633926392,
+          "ap@0.5": 0.10404638200998306,
+          "ap@0.6": 0.07635080814361572,
+          "ap@0.7": 0.04180942475795746,
+          "ap@0.75": 0.02542109787464142,
+          "ap@0.8": 0.013002369552850723,
+          "ap@0.9": 0.0010752499802038074,
+          "ap@0.95": 0.00010812300752149895,
+          "ar@1": 0.10738231986761093,
+          "ar@10": 0.29923319816589355,
+          "ar@2": 0.16044948995113373,
+          "ar@20": 0.3568059802055359,
+          "ar@30": 0.37415653467178345,
+          "ar@5": 0.2370809018611908,
+          "ar@50": 0.3744262158870697,
+          "avg_map_0107": 0.1451836877635547
+        },
+        "population": {
+          "n_clips": 28531,
+          "n_fake": 14302,
+          "n_gt_segments": 18910,
+          "n_real": 14229
+        }
+      },
+      "overall": {
+        "definition": "all scored protocol clips",
+        "point": {
+          "ap@0.1": 0.6377261877059937,
+          "ap@0.2": 0.5919821262359619,
+          "ap@0.3": 0.5448577404022217,
+          "ap@0.4": 0.4894654154777527,
+          "ap@0.5": 0.4223203659057617,
+          "ap@0.6": 0.34402328729629517,
+          "ap@0.7": 0.2121845930814743,
+          "ap@0.75": 0.138703852891922,
+          "ap@0.8": 0.07862812280654907,
+          "ap@0.9": 0.007207641843706369,
+          "ap@0.95": 0.0007403397466987371,
+          "ar@1": 0.2206236869096756,
+          "ar@10": 0.45463985204696655,
+          "ar@2": 0.3057534098625183,
+          "ar@20": 0.4877140522003174,
+          "ar@30": 0.4944811761379242,
+          "ar@5": 0.3991263210773468,
+          "ar@50": 0.4945705533027649,
+          "avg_map_0107": 0.46322281658649445
+        },
+        "population": {
+          "n_clips": 57315,
+          "n_fake": 43086,
+          "n_gt_segments": 57114,
+          "n_real": 14229
+        }
+      }
+    },
+    "uncertainty": {
+      "confidence_level": 0.95,
+      "interval_type": "percentile",
+      "marginal": {
+        "ap@0.1": {
+          "hi": 0.6418671146035194,
+          "lo": 0.6336079731583595,
+          "n": 20000,
+          "point": 0.6377261877059937,
+          "sd": 0.002094006675295385
+        },
+        "ap@0.2": {
+          "hi": 0.5964143931865692,
+          "lo": 0.5875853717327117,
+          "n": 20000,
+          "point": 0.5919821262359619,
+          "sd": 0.0022454295407629385
+        },
+        "ap@0.3": {
+          "hi": 0.5494855850934982,
+          "lo": 0.5403598338365555,
+          "n": 20000,
+          "point": 0.5448577404022217,
+          "sd": 0.0023436104027015374
+        },
+        "ap@0.4": {
+          "hi": 0.4942608788609505,
+          "lo": 0.4848486691713333,
+          "n": 20000,
+          "point": 0.4894654154777527,
+          "sd": 0.00241587830813269
+        },
+        "ap@0.5": {
+          "hi": 0.4272156745195389,
+          "lo": 0.4176187850534916,
+          "n": 20000,
+          "point": 0.4223203659057617,
+          "sd": 0.0024581587504048357
+        },
+        "ap@0.6": {
+          "hi": 0.348846310377121,
+          "lo": 0.33939292281866074,
+          "n": 20000,
+          "point": 0.34402328729629517,
+          "sd": 0.002405857777378899
+        },
+        "ap@0.7": {
+          "hi": 0.21662352681159974,
+          "lo": 0.20793701633810996,
+          "n": 20000,
+          "point": 0.2121845930814743,
+          "sd": 0.0022279649830203494
+        },
+        "ap@0.75": {
+          "hi": 0.1424497377127409,
+          "lo": 0.13518504835665227,
+          "n": 20000,
+          "point": 0.138703852891922,
+          "sd": 0.0018469236866645714
+        },
+        "ap@0.8": {
+          "hi": 0.08143680449575186,
+          "lo": 0.07602329589426518,
+          "n": 20000,
+          "point": 0.07862812280654907,
+          "sd": 0.0013868844012016783
+        },
+        "ap@0.9": {
+          "hi": 0.007855392713099717,
+          "lo": 0.006702013278845698,
+          "n": 20000,
+          "point": 0.007207641843706369,
+          "sd": 0.0002944998124571112
+        },
+        "ap@0.95": {
+          "hi": 0.0008710654510650783,
+          "lo": 0.0006509366066893563,
+          "n": 20000,
+          "point": 0.0007403397466987371,
+          "sd": 5.5702003146340084e-05
+        },
+        "ar@1": {
+          "hi": 0.2235669992864132,
+          "lo": 0.21761209405958654,
+          "n": 20000,
+          "point": 0.2206236869096756,
+          "sd": 0.001528799321780442
+        },
+        "ar@10": {
+          "hi": 0.45778706669807434,
+          "lo": 0.45151398330926895,
+          "n": 20000,
+          "point": 0.45463985204696655,
+          "sd": 0.0016095759893985826
+        },
+        "ar@2": {
+          "hi": 0.30896885246038436,
+          "lo": 0.3024470031261444,
+          "n": 20000,
+          "point": 0.3057534098625183,
+          "sd": 0.001668494087142922
+        },
+        "ar@20": {
+          "hi": 0.4906872406601906,
+          "lo": 0.4847350105643272,
+          "n": 20000,
+          "point": 0.4877140522003174,
+          "sd": 0.0015198488495000472
+        },
+        "ar@30": {
+          "hi": 0.49740312844514845,
+          "lo": 0.4915493130683899,
+          "n": 20000,
+          "point": 0.4944811761379242,
+          "sd": 0.001486910777183811
+        },
+        "ar@5": {
+          "hi": 0.4024203740060329,
+          "lo": 0.39581440538167956,
+          "n": 20000,
+          "point": 0.3991263210773468,
+          "sd": 0.0016833478056752665
+        },
+        "ar@50": {
+          "hi": 0.4974853448569775,
+          "lo": 0.4916508659720421,
+          "n": 20000,
+          "point": 0.4945705533027649,
+          "sd": 0.0014850152319652225
+        },
+        "avg_map_0107": {
+          "hi": 0.46723751250122275,
+          "lo": 0.4592786648975951,
+          "n": 20000,
+          "point": 0.46322281658649445,
+          "sd": 0.0020247054210523327
+        }
+      },
+      "n_clusters": 1656,
+      "n_registered": 20000,
+      "n_resamples": 20000,
+      "numpy_method": "linear",
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "resampling": "speaker cluster via cast.eval.bootstrap.speaker_cluster_key",
+      "scope": "pointwise marginal",
+      "sd_ddof": 0,
+      "seed": 1,
+      "simultaneous": false
+    }
+  },
+  "detection": {
+    "overall": {
+      "attrition": {
+        "expected_by_target": {
+          "0": 14235,
+          "1": 43105
+        },
+        "missing_by_modify_type": {
+          "audio_modified": 10,
+          "both_modified": 7,
+          "real": 6,
+          "visual_modified": 2
+        },
+        "missing_by_target": {
+          "0": 6,
+          "1": 19
+        },
+        "n_expected": 57340,
+        "n_missing": 25,
+        "n_scored": 57315,
+        "scored_by_target": {
+          "0": 14229,
+          "1": 43086
+        }
+      },
+      "definition": "all scored protocol clips",
+      "exact_rank_rates": {
+        "0.01": {
+          "fpr": {
+            "k": 96,
+            "n": 14229,
+            "point": 0.006746784735399536,
+            "population": "real",
+            "wilson95": [
+              0.005528449671297437,
+              0.00823138870138564
+            ]
+          },
+          "tpr": {
+            "k": 18326,
+            "n": 43086,
+            "point": 0.4253353757601077,
+            "population": "fake",
+            "wilson95": [
+              0.4206739119609401,
+              0.4300101527491053
+            ]
+          }
+        },
+        "0.05": {
+          "fpr": {
+            "k": 727,
+            "n": 14229,
+            "point": 0.051092838569119406,
+            "population": "real",
+            "wilson95": [
+              0.0475945282132635,
+              0.054833478854559144
+            ]
+          },
+          "tpr": {
+            "k": 29724,
+            "n": 43086,
+            "point": 0.6898760618298287,
+            "population": "fake",
+            "wilson95": [
+              0.6854917126611525,
+              0.6942265548573803
+            ]
+          }
+        },
+        "0.1": {
+          "fpr": {
+            "k": 1373,
+            "n": 14229,
+            "point": 0.09649307751774545,
+            "population": "real",
+            "wilson95": [
+              0.09174984631376931,
+              0.10145413060676356
+            ]
+          },
+          "tpr": {
+            "k": 33502,
+            "n": 43086,
+            "point": 0.7775611567562549,
+            "population": "fake",
+            "wilson95": [
+              0.7736095113085109,
+              0.7814633112381378
+            ]
+          }
+        }
+      },
+      "population": {
+        "n_expected": 57340,
+        "n_fake": 43086,
+        "n_missing": 25,
+        "n_real": 14229,
+        "n_scored": 57315
+      },
+      "primary_auc_uncertainty": {
+        "ci95": [
+          0.9160587936807345,
+          0.9212699745434264
+        ],
+        "n_degenerate": 0,
+        "n_effective": 20000,
+        "n_registered": 20000,
+        "point": 0.9187013830741027,
+        "sd": 0.0013327606892960756
+      },
+      "primary_metrics": {
+        "average_precision": 0.9718563584453966,
+        "definition": "EER uses the empirical ROC point minimizing |FPR-FNR|; operating points use max TPR at FPR<=alpha and min FPR at TPR>=target. Descriptive only; no evaluation-selected F1/accuracy.",
+        "eer": 0.15650517458921304,
+        "eer_fnr": 0.1567098361416701,
+        "eer_fpr": 0.15630051303675593,
+        "eer_pvalue_threshold": 0.1617021276595744,
+        "eer_score_threshold": 1.8219993544177737,
+        "fpr_at_tpr": {
+          "0.9": 0.26453018483379015,
+          "0.95": 0.4422657952069717
+        },
+        "tpr_at_fpr": {
+          "0.01": 0.4738662210462795,
+          "0.05": 0.6833774311841433,
+          "0.1": 0.7818781042566031
+        }
+      }
+    },
+    "strata": {
+      "modify_type": {}
+    },
+    "bootstrap": {
+      "draw_scope": "one protocol-level multinomial stream shared by all panels",
+      "joint_draws": true,
+      "n_boot": 20000,
+      "n_groups": 1656,
+      "seed": 1,
+      "statistic": "ROC-AUC of -log(p_final_mix)",
+      "unit": "speaker cluster via cast.eval.bootstrap.speaker_cluster_key"
+    }
+  },
+  "views": {
+    "table_1_gem_reporting_grid": {
+      "metric_grid": {
+        "ap_iou": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7
+        ],
+        "ar_budgets": [
+          20,
+          10,
+          5,
+          2
+        ]
+      },
+      "metrics": {
+        "ap@0.1": 0.6377261877059937,
+        "ap@0.2": 0.5919821262359619,
+        "ap@0.3": 0.5448577404022217,
+        "ap@0.4": 0.4894654154777527,
+        "ap@0.5": 0.4223203659057617,
+        "ap@0.6": 0.34402328729629517,
+        "ap@0.7": 0.2121845930814743,
+        "ar@10": 0.78609699010849,
+        "ar@2": 0.5764385461807251,
+        "ar@20": 0.8313973546028137,
+        "ar@5": 0.7069695591926575,
+        "avg_map_0107": 0.46322281658649445
+      },
+      "population": {
+        "n_expected": 57340,
+        "n_fake": 43086,
+        "n_missing": 25,
+        "n_real": 14229,
+        "n_scored": 57315
+      }
+    },
+    "table_4_trimmed_shared_10000": {
+      "bootstrap": {
+        "joint_draws": true,
+        "n_boot": 20000,
+        "n_groups": 1499,
+        "percentile_interval": [
+          2.5,
+          97.5
+        ],
+        "resampling": "draw n_groups iid cluster indices with replacement, then apply their multiplicities to every metric",
+        "rng": "numpy.random.default_rng (PCG64)",
+        "seed": 0,
+        "statistic": "joint ROC-AUC, average precision, empirical EER, and ROC operating-point metrics of -log(p_final_mix)",
+        "unit": "speaker cluster via cast.eval.bootstrap.speaker_cluster_key"
+      },
+      "comparison_protocol": {
+        "attrition": "9,997/10,000 scored; three fixed media-decode failures, declared before metric computation",
+        "competitors": [
+          {
+            "method": "AVH-Align",
+            "roc_auc": 0.835,
+            "source": "published trimmed AV-Deepfake1M 10k protocol"
+          },
+          {
+            "method": "AVPF",
+            "roc_auc": 0.892,
+            "source": "published trimmed AV-Deepfake1M 10k protocol"
+          }
+        ],
+        "fit_contract": "CAST null/calibration/fusion references use the frozen AV-Deepfake1M training genuine pool plus the controlled self-splice corpus; no validation-forgery media, labels, intervals, or durations are numerical fit inputs. Design contacts and full-manifest exclusions are disclosed separately",
+        "matched_dimensions": [
+          "released 10,000-clip evaluation list",
+          "input-level leading-silence trimming",
+          "whole-clip ROC-AUC"
+        ],
+        "not_matched": "training/reference strategies differ across methods; this is an evaluation-protocol match, not a training-data match",
+        "preprocessing": "media decoded and leading silence removed before every feature extractor; no post-feature trim replay",
+        "registered_list_size": 10000
+      },
+      "exact_rank_rates": {
+        "0.01": {
+          "fpr": {
+            "k": 18,
+            "n": 2494,
+            "point": 0.007217321571772253,
+            "population": "real",
+            "wilson95": [
+              0.004570167441002183,
+              0.011380243505792843
+            ]
+          },
+          "tpr": {
+            "k": 3125,
+            "n": 7503,
+            "point": 0.41650006664001066,
+            "population": "fake",
+            "wilson95": [
+              0.4053906481024462,
+              0.4276949467767638
+            ]
+          }
+        },
+        "0.05": {
+          "fpr": {
+            "k": 138,
+            "n": 2494,
+            "point": 0.05533279871692061,
+            "population": "real",
+            "wilson95": [
+              0.04702452285446752,
+              0.06500884227164777
+            ]
+          },
+          "tpr": {
+            "k": 5155,
+            "n": 7503,
+            "point": 0.6870585099293616,
+            "population": "fake",
+            "wilson95": [
+              0.6764728202104943,
+              0.6974527465684823
+            ]
+          }
+        },
+        "0.1": {
+          "fpr": {
+            "k": 260,
+            "n": 2494,
+            "point": 0.10425020048115477,
+            "population": "real",
+            "wilson95": [
+              0.09285930451867398,
+              0.1168583973564169
+            ]
+          },
+          "tpr": {
+            "k": 5768,
+            "n": 7503,
+            "point": 0.7687591630014661,
+            "population": "fake",
+            "wilson95": [
+              0.7590826887447769,
+              0.7781605641300408
+            ]
+          }
+        }
+      },
+      "metric_contract": {
+        "primary": "ROC-AUC of -log(p_final_mix)",
+        "reported": [
+          "ROC-AUC",
+          "average precision",
+          "EER",
+          "TPR at FPR {0.01,0.05,0.10}",
+          "FPR at TPR {0.90,0.95}",
+          "exact-rank rates",
+          "all five registered p-value score panels"
+        ],
+        "threshold_selection": "none",
+        "uncertainty": "20,000 seed-0 speaker-clustered draws shared by all primary AUC/AP/EER/operating metrics"
+      },
+      "population": {
+        "modify_type": {
+          "audio_modified": 2499,
+          "both_modified": 2547,
+          "real": 2494,
+          "visual_modified": 2457
+        },
+        "n": 9997,
+        "n_speaker_clusters": 1499,
+        "target": {
+          "0": 2494,
+          "1": 7503
+        }
+      },
+      "preprocessing": "input-level leading-silence trim",
+      "primary": {
+        "average_precision": 0.9684671678805262,
+        "column": "p_final_mix",
+        "eer": 0.16810185842797337,
+        "fpr_at_tpr": {
+          "0.9": 0.2971130713712911,
+          "0.95": 0.49518845228548514
+        },
+        "roc_auc": 0.9095072209020694,
+        "statistic": "-log(p_final_mix)",
+        "tpr_at_fpr": {
+          "0.01": 0.45501799280287886,
+          "0.05": 0.6702652272424363,
+          "0.1": 0.7616953218712516
+        },
+        "uncertainty": {
+          "average_precision": {
+            "ci95": [
+              0.9656720588966233,
+              0.971163034921399
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.9684671678805262,
+            "sd": 0.0013979662392834388
+          },
+          "eer": {
+            "ci95": [
+              0.15950285257895558,
+              0.17622511732589172
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.16810185842797337,
+            "sd": 0.004286772766142021
+          },
+          "fpr_at_tpr:0.9": {
+            "ci95": [
+              0.2718484473695471,
+              0.32341863057949316
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.2971130713712911,
+            "sd": 0.013105807570666646
+          },
+          "fpr_at_tpr:0.95": {
+            "ci95": [
+              0.46006351097324183,
+              0.5276631303504155
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.49518845228548514,
+            "sd": 0.016956265956247763
+          },
+          "roc_auc": {
+            "ci95": [
+              0.9035301123646164,
+              0.915392712382429
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.9095072209020694,
+            "sd": 0.0030285000457363704
+          },
+          "tpr_at_fpr:0.01": {
+            "ci95": [
+              0.392339264721148,
+              0.5223217337869515
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.45501799280287886,
+            "sd": 0.034882371984485995
+          },
+          "tpr_at_fpr:0.05": {
+            "ci95": [
+              0.639966981788598,
+              0.6925449598496924
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.6702652272424363,
+            "sd": 0.013510576379698264
+          },
+          "tpr_at_fpr:0.1": {
+            "ci95": [
+              0.7444397392080853,
+              0.7796940393737042
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.7616953218712516,
+            "sd": 0.00887135489816939
+          }
+        }
+      },
+      "score_panels": {
+        "p_final_mix": {
+          "column": "p_final_mix",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9684671678805262,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.16810185842797337,
+            "fpr_at_tpr": {
+              "0.9": 0.2971130713712911,
+              "0.95": 0.49518845228548514
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.45501799280287886,
+              "0.05": 0.6702652272424363,
+              "0.1": 0.7616953218712516
+            }
+          },
+          "population": {
+            "n_fake": 7503,
+            "n_finite": 9997,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 9997
+          },
+          "roc_auc": 0.9095072209020694,
+          "statistic": "-log(p_final_mix)"
+        },
+        "p_final_sum": {
+          "column": "p_final_sum",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9593721346207764,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.18651975189608738,
+            "fpr_at_tpr": {
+              "0.9": 0.3239775461106656,
+              "0.95": 0.4967923015236568
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.3173397307743569,
+              "0.05": 0.5769692123150739,
+              "0.1": 0.7021191523390644
+            }
+          },
+          "population": {
+            "n_fake": 7503,
+            "n_finite": 9997,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 9997
+          },
+          "roc_auc": 0.8916641309260845,
+          "statistic": "-log(p_final_sum)"
+        },
+        "p_scan": {
+          "column": "p_scan",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9175497544650681,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.2857526062015717,
+            "fpr_at_tpr": {
+              "0.9": 0.595028067361668,
+              "0.95": 0.7514033680834001
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.17299746767959484,
+              "0.05": 0.3743835799013728,
+              "0.1": 0.47847527655604427
+            }
+          },
+          "population": {
+            "n_fake": 7503,
+            "n_finite": 9997,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 9997
+          },
+          "roc_auc": 0.7888705250324356,
+          "statistic": "-log(p_scan)"
+        },
+        "px_final_mix": {
+          "column": "px_final_mix",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9682882658384655,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.16810185842797337,
+            "fpr_at_tpr": {
+              "0.9": 0.2971130713712911,
+              "0.95": 0.49518845228548514
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.45808343329334933,
+              "0.05": 0.6695988271358123,
+              "0.1": 0.7619618819139011
+            }
+          },
+          "population": {
+            "n_fake": 7503,
+            "n_finite": 9997,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 9997
+          },
+          "roc_auc": 0.9095315095025877,
+          "statistic": "-log(px_final_mix)"
+        },
+        "px_final_sum": {
+          "column": "px_final_sum",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9588917547925108,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.18651975189608738,
+            "fpr_at_tpr": {
+              "0.9": 0.3239775461106656,
+              "0.95": 0.4967923015236568
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.31800613088098095,
+              "0.05": 0.5759029721444755,
+              "0.1": 0.7006530721044916
+            }
+          },
+          "population": {
+            "n_fake": 7503,
+            "n_finite": 9997,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 9997
+          },
+          "roc_auc": 0.8916978517334044,
+          "statistic": "-log(px_final_sum)"
+        }
+      }
+    },
+    "table_4_untrimmed_boldisor_5133": {
+      "bootstrap": {
+        "joint_draws": true,
+        "n_boot": 20000,
+        "n_groups": 1275,
+        "percentile_interval": [
+          2.5,
+          97.5
+        ],
+        "resampling": "draw n_groups iid cluster indices with replacement, then apply their multiplicities to every metric",
+        "rng": "numpy.random.default_rng (PCG64)",
+        "seed": 0,
+        "statistic": "joint ROC-AUC, average precision, empirical EER, and ROC operating-point metrics of -log(p_final_mix)",
+        "unit": "speaker cluster via cast.eval.bootstrap.speaker_cluster_key"
+      },
+      "exact_rank_rates": {
+        "0.01": {
+          "fpr": {
+            "k": 19,
+            "n": 2494,
+            "point": 0.007618283881315156,
+            "population": "real",
+            "wilson95": [
+              0.004882577002394064,
+              0.01186852522922863
+            ]
+          },
+          "tpr": {
+            "k": 1650,
+            "n": 2638,
+            "point": 0.6254738438210766,
+            "population": "fake",
+            "wilson95": [
+              0.6068340287190466,
+              0.6437487465692222
+            ]
+          }
+        },
+        "0.05": {
+          "fpr": {
+            "k": 138,
+            "n": 2494,
+            "point": 0.05533279871692061,
+            "population": "real",
+            "wilson95": [
+              0.04702452285446752,
+              0.06500884227164777
+            ]
+          },
+          "tpr": {
+            "k": 2291,
+            "n": 2638,
+            "point": 0.8684609552691432,
+            "population": "fake",
+            "wilson95": [
+              0.8550254474988392,
+              0.8808248775168618
+            ]
+          }
+        },
+        "0.1": {
+          "fpr": {
+            "k": 260,
+            "n": 2494,
+            "point": 0.10425020048115477,
+            "population": "real",
+            "wilson95": [
+              0.09285930451867398,
+              0.1168583973564169
+            ]
+          },
+          "tpr": {
+            "k": 2438,
+            "n": 2638,
+            "point": 0.9241849886277483,
+            "population": "fake",
+            "wilson95": [
+              0.9134554192233448,
+              0.933680911736089
+            ]
+          }
+        }
+      },
+      "population": {
+        "n": 5132,
+        "n_fake": 2638,
+        "n_real": 2494,
+        "n_speaker_clusters": 1275
+      },
+      "preprocessing": "untrimmed",
+      "primary": {
+        "average_precision": 0.9734697236337312,
+        "column": "p_final_mix",
+        "eer": 0.08826809817405595,
+        "fpr_at_tpr": {
+          "0.9": 0.07818765036086608,
+          "0.95": 0.1467522052927025
+        },
+        "roc_auc": 0.9709028734922874,
+        "statistic": "-log(p_final_mix)",
+        "tpr_at_fpr": {
+          "0.01": 0.6633813495072024,
+          "0.05": 0.8555724033358605,
+          "0.1": 0.9192570128885519
+        },
+        "uncertainty": {
+          "average_precision": {
+            "ci95": [
+              0.9690710563824418,
+              0.9775081289059016
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.9734697236337312,
+            "sd": 0.002145108354217577
+          },
+          "eer": {
+            "ci95": [
+              0.08064473039828964,
+              0.09616568643512621
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.08826809817405595,
+            "sd": 0.003985336576139581
+          },
+          "fpr_at_tpr:0.9": {
+            "ci95": [
+              0.06171761390368042,
+              0.09211038501850871
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.07818765036086608,
+            "sd": 0.007765006890725016
+          },
+          "fpr_at_tpr:0.95": {
+            "ci95": [
+              0.12247398613593413,
+              0.16964320537107197
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.1467522052927025,
+            "sd": 0.011955243971486902
+          },
+          "roc_auc": {
+            "ci95": [
+              0.966852400194639,
+              0.9747970736167644
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.9709028734922874,
+            "sd": 0.002031608078414262
+          },
+          "tpr_at_fpr:0.01": {
+            "ci95": [
+              0.5888158863060611,
+              0.7363092146398204
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.6633813495072024,
+            "sd": 0.03897399766272837
+          },
+          "tpr_at_fpr:0.05": {
+            "ci95": [
+              0.8338472514614359,
+              0.8745333374055895
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.8555724033358605,
+            "sd": 0.01034341509272372
+          },
+          "tpr_at_fpr:0.1": {
+            "ci95": [
+              0.9070277986624985,
+              0.934558993421768
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.9192570128885519,
+            "sd": 0.006944299828333124
+          }
+        }
+      },
+      "score_panels": {
+        "p_final_mix": {
+          "column": "p_final_mix",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9734697236337312,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.08826809817405595,
+            "fpr_at_tpr": {
+              "0.9": 0.07818765036086608,
+              "0.95": 0.1467522052927025
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.6633813495072024,
+              "0.05": 0.8555724033358605,
+              "0.1": 0.9192570128885519
+            }
+          },
+          "population": {
+            "n_fake": 2638,
+            "n_finite": 5132,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 5132
+          },
+          "roc_auc": 0.9709028734922874,
+          "statistic": "-log(p_final_mix)"
+        },
+        "p_final_sum": {
+          "column": "p_final_sum",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9528321491635987,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.12159828014832269,
+            "fpr_at_tpr": {
+              "0.9": 0.14274258219727345,
+              "0.95": 0.21892542101042503
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.4715693707354056,
+              "0.05": 0.7547384382107657,
+              "0.1": 0.8589840788476119
+            }
+          },
+          "population": {
+            "n_fake": 2638,
+            "n_finite": 5132,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 5132
+          },
+          "roc_auc": 0.9518826989171282,
+          "statistic": "-log(p_final_sum)"
+        },
+        "p_scan": {
+          "column": "p_scan",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.8694919313743418,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.23147411254790118,
+            "fpr_at_tpr": {
+              "0.9": 0.4330392943063352,
+              "0.95": 0.5789895749799518
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.2623199393479909,
+              "0.05": 0.49962092494313876,
+              "0.1": 0.604245640636846
+            }
+          },
+          "population": {
+            "n_fake": 2638,
+            "n_finite": 5132,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 5132
+          },
+          "roc_auc": 0.8558241067416995,
+          "statistic": "-log(p_scan)"
+        },
+        "px_final_mix": {
+          "column": "px_final_mix",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9729407323195958,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.08923767306889074,
+            "fpr_at_tpr": {
+              "0.9": 0.07618283881315156,
+              "0.95": 0.1467522052927025
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.6660348749052313,
+              "0.05": 0.8567096285064443,
+              "0.1": 0.9196360879454132
+            }
+          },
+          "population": {
+            "n_fake": 2638,
+            "n_finite": 5132,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 5132
+          },
+          "roc_auc": 0.9709371483220077,
+          "statistic": "-log(px_final_mix)"
+        },
+        "px_final_sum": {
+          "column": "px_final_sum",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9514694398954362,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.12159828014832269,
+            "fpr_at_tpr": {
+              "0.9": 0.14274258219727345,
+              "0.95": 0.21892542101042503
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.4727065959059894,
+              "0.05": 0.7532221379833207,
+              "0.1": 0.8586050037907506
+            }
+          },
+          "population": {
+            "n_fake": 2638,
+            "n_finite": 5132,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 5132
+          },
+          "roc_auc": 0.951843712248289,
+          "statistic": "-log(px_final_sum)"
+        }
+      }
+    },
+    "table_4_untrimmed_shared_10000": {
+      "bootstrap": {
+        "joint_draws": true,
+        "n_boot": 20000,
+        "n_groups": 1499,
+        "percentile_interval": [
+          2.5,
+          97.5
+        ],
+        "resampling": "draw n_groups iid cluster indices with replacement, then apply their multiplicities to every metric",
+        "rng": "numpy.random.default_rng (PCG64)",
+        "seed": 0,
+        "statistic": "joint ROC-AUC, average precision, empirical EER, and ROC operating-point metrics of -log(p_final_mix)",
+        "unit": "speaker cluster via cast.eval.bootstrap.speaker_cluster_key"
+      },
+      "exact_rank_rates": {
+        "0.01": {
+          "fpr": {
+            "k": 19,
+            "n": 2494,
+            "point": 0.007618283881315156,
+            "population": "real",
+            "wilson95": [
+              0.004882577002394064,
+              0.01186852522922863
+            ]
+          },
+          "tpr": {
+            "k": 3211,
+            "n": 7503,
+            "point": 0.42796214847394376,
+            "population": "fake",
+            "wilson95": [
+              0.4168060558567408,
+              0.43919197132955295
+            ]
+          }
+        },
+        "0.05": {
+          "fpr": {
+            "k": 138,
+            "n": 2494,
+            "point": 0.05533279871692061,
+            "population": "real",
+            "wilson95": [
+              0.04702452285446752,
+              0.06500884227164777
+            ]
+          },
+          "tpr": {
+            "k": 5245,
+            "n": 7503,
+            "point": 0.6990537118485939,
+            "population": "fake",
+            "wilson95": [
+              0.6885754124721832,
+              0.7093282811397881
+            ]
+          }
+        },
+        "0.1": {
+          "fpr": {
+            "k": 260,
+            "n": 2494,
+            "point": 0.10425020048115477,
+            "population": "real",
+            "wilson95": [
+              0.09285930451867398,
+              0.1168583973564169
+            ]
+          },
+          "tpr": {
+            "k": 5878,
+            "n": 7503,
+            "point": 0.7834199653471945,
+            "population": "fake",
+            "wilson95": [
+              0.7739555557365527,
+              0.7925942966008139
+            ]
+          }
+        }
+      },
+      "population": {
+        "modify_type": {
+          "audio_modified": 2499,
+          "both_modified": 2547,
+          "real": 2494,
+          "visual_modified": 2457
+        },
+        "n": 9997,
+        "n_speaker_clusters": 1499,
+        "target": {
+          "0": 2494,
+          "1": 7503
+        }
+      },
+      "preprocessing": "untrimmed",
+      "primary": {
+        "average_precision": 0.9712809404156032,
+        "column": "p_final_mix",
+        "eer": 0.15889263113252422,
+        "fpr_at_tpr": {
+          "0.9": 0.26744186046511625,
+          "0.95": 0.43985565356856454
+        },
+        "roc_auc": 0.9181880575756867,
+        "statistic": "-log(p_final_mix)",
+        "tpr_at_fpr": {
+          "0.01": 0.46701319472211117,
+          "0.05": 0.6827935492469679,
+          "0.1": 0.7764894042383047
+        },
+        "uncertainty": {
+          "average_precision": {
+            "ci95": [
+              0.9686191390254,
+              0.9738408404586251
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.9712809404156032,
+            "sd": 0.0013301571120870285
+          },
+          "eer": {
+            "ci95": [
+              0.15126776233257808,
+              0.16741437962086977
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.15889263113252422,
+            "sd": 0.004136161404095621
+          },
+          "fpr_at_tpr:0.9": {
+            "ci95": [
+              0.23805869309769284,
+              0.2924490649549403
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.26744186046511625,
+            "sd": 0.013682556900351785
+          },
+          "fpr_at_tpr:0.95": {
+            "ci95": [
+              0.4110182120172215,
+              0.47172798835203755
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.43985565356856454,
+            "sd": 0.01590113106282903
+          },
+          "roc_auc": {
+            "ci95": [
+              0.9125266061903802,
+              0.9238022427432495
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.9181880575756867,
+            "sd": 0.002878580675736959
+          },
+          "tpr_at_fpr:0.01": {
+            "ci95": [
+              0.39855686764622383,
+              0.53750042633015
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.46701319472211117,
+            "sd": 0.03736146101283652
+          },
+          "tpr_at_fpr:0.05": {
+            "ci95": [
+              0.6555598790752715,
+              0.7032827535013547
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.6827935492469679,
+            "sd": 0.012275431631013493
+          },
+          "tpr_at_fpr:0.1": {
+            "ci95": [
+              0.7600374360246552,
+              0.7960547140041646
+            ],
+            "n_degenerate": 0,
+            "n_effective": 20000,
+            "n_registered": 20000,
+            "point": 0.7764894042383047,
+            "sd": 0.009100036362320171
+          }
+        }
+      },
+      "score_panels": {
+        "p_final_mix": {
+          "column": "p_final_mix",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9712809404156032,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.15889263113252422,
+            "fpr_at_tpr": {
+              "0.9": 0.26744186046511625,
+              "0.95": 0.43985565356856454
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.46701319472211117,
+              "0.05": 0.6827935492469679,
+              "0.1": 0.7764894042383047
+            }
+          },
+          "population": {
+            "n_fake": 7503,
+            "n_finite": 9997,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 9997
+          },
+          "roc_auc": 0.9181880575756867,
+          "statistic": "-log(p_final_mix)"
+        },
+        "p_final_sum": {
+          "column": "p_final_sum",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.96321604212725,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.17824460699548034,
+            "fpr_at_tpr": {
+              "0.9": 0.2834803528468324,
+              "0.95": 0.4446672012830794
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.3277355724376916,
+              "0.05": 0.5962948154071704,
+              "0.1": 0.7231773957083834
+            }
+          },
+          "population": {
+            "n_fake": 7503,
+            "n_finite": 9997,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 9997
+          },
+          "roc_auc": 0.9025365528741724,
+          "statistic": "-log(p_final_sum)"
+        },
+        "p_scan": {
+          "column": "p_scan",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9188251468063036,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.2834834791023446,
+            "fpr_at_tpr": {
+              "0.9": 0.5842020850040096,
+              "0.95": 0.7453889334402566
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.18112754898040784,
+              "0.05": 0.3758496601359456,
+              "0.1": 0.48274023723843795
+            }
+          },
+          "population": {
+            "n_fake": 7503,
+            "n_finite": 9997,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 9997
+          },
+          "roc_auc": 0.7919241819444368,
+          "statistic": "-log(p_scan)"
+        },
+        "px_final_mix": {
+          "column": "px_final_mix",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9711011789970011,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.15889263113252422,
+            "fpr_at_tpr": {
+              "0.9": 0.26744186046511625,
+              "0.95": 0.43985565356856454
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.46941223510595764,
+              "0.05": 0.6814607490337199,
+              "0.1": 0.7770225243236039
+            }
+          },
+          "population": {
+            "n_fake": 7503,
+            "n_finite": 9997,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 9997
+          },
+          "roc_auc": 0.9182075632724723,
+          "statistic": "-log(px_final_mix)"
+        },
+        "px_final_sum": {
+          "column": "px_final_sum",
+          "defined": true,
+          "operating_points": {
+            "average_precision": 0.9627355146534394,
+            "definition": "EER is the empirical ROC point minimizing |FPR-FNR|; fixed-FPR TPR uses the highest attainable TPR without exceeding the target.",
+            "eer": 0.17824460699548034,
+            "fpr_at_tpr": {
+              "0.9": 0.2834803528468324,
+              "0.95": 0.4446672012830794
+            },
+            "tpr_at_fpr": {
+              "0.01": 0.3280021324803412,
+              "0.05": 0.5950952952152473,
+              "0.1": 0.7222444355591097
+            }
+          },
+          "population": {
+            "n_fake": 7503,
+            "n_finite": 9997,
+            "n_missing": 0,
+            "n_real": 2494,
+            "n_total": 9997
+          },
+          "roc_auc": 0.9025397592900823,
+          "statistic": "-log(px_final_sum)"
+        }
+      }
+    }
+  }
+}

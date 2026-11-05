@@ -1,0 +1,29 @@
+{
+  "calibration": {
+    "title": "False-alarm rate on genuine clips",
+    "height_inches": 2.2,
+    "bottom": 0.23,
+    "xlim": [0.0, 0.105],
+    "ylim": [0.0, 0.118],
+    "rate_ticks": [0.0, 0.02, 0.04, 0.06, 0.08, 0.1],
+    "nominal_ticks": [
+      0.0,
+      0.02,
+      0.04,
+      0.06,
+      0.08,
+      0.1
+    ],
+    "paper_figure": "3"
+  },
+  "confidence": {
+    "view": "benchmark",
+    "intervals": true,
+    "paper_figure": "S1"
+  },
+  "comparison": {
+    "view": "comparison",
+    "intervals": false,
+    "paper_figure": "S3"
+  }
+}

@@ -1,0 +1,55 @@
+{
+ "benchmark_labels_used_for_fit": false,
+ "boundary_curve": "full_band_flux_percentile",
+ "features": [
+  "log1p_rank",
+  "adjusted_score",
+  "audio_boundary_cue"
+ ],
+ "fit_population": {
+  "positive_assignments": 12726,
+  "rows": 279949,
+  "rows_excluded": 644
+ },
+ "mu": [
+  2.1608183451877108,
+  5.184500251686935,
+  0.9273086000460095
+ ],
+ "nofill": true,
+ "pct_rule": "ecdf",
+ "prediction_pair_members": [],
+ "protocol": "ext_ref",
+ "pseudo_labels_source": "self-splice synthetic bounds only",
+ "schema": "cast.proposal-ranker.v1",
+ "score_group_bank": {
+  "artifact": [
+   "visual_artifact_score",
+   "audio_artifact_score"
+  ],
+  "avsr": [
+   "audio_side_avsr_agreement",
+   "video_side_avsr_agreement"
+  ],
+  "main": [
+   "cross_modal_agreement"
+  ],
+  "sync": [
+   "synchrony_residual"
+  ]
+ },
+ "sd": [
+  0.8492523495162526,
+  3.070901171104912,
+  0.05847913517906873
+ ],
+ "self_splice_corpus": {
+  "path": "models/self_splice_corpus.npz"
+ },
+ "w": [
+  -4.772351311950913,
+  -1.3095223283519553,
+  0.6358565522379873,
+  0.44948482321619243
+ ]
+}

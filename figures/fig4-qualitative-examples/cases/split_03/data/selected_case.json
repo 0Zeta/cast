@@ -1,0 +1,100 @@
+{
+ "audio_model": "vits_word",
+ "clip_scores": {
+  "p_final_mix": 7.285063344246883e-05,
+  "px_final_mix": 0.0028653295128939827,
+  "s_clip": 19.396338366029152
+ },
+ "container_duration_s": 18.84,
+ "display_window_s": {
+  "end": 13.519999999999998,
+  "start": 1.3400000000000012
+ },
+ "duration_s": 18.84,
+ "fps": 25.0,
+ "genuine_flanks_s": {
+  "after": 8.8,
+  "before": 4.82
+ },
+ "ground_truth": {
+  "end_s": 10.04,
+  "interval_semantics": "half-open seconds",
+  "n_intervals": 2,
+  "start_s": 4.82
+ },
+ "ground_truth_intervals": [
+  {
+   "end_s": 5.23,
+   "start_s": 4.82
+  },
+  {
+   "end_s": 10.04,
+   "start_s": 9.39
+  }
+ ],
+ "logical_video_id": "id01960/OxaJUiDsMu8/00192/fake_video_fake_audio.mp4",
+ "minimum_genuine_flank_s": 0.0,
+ "modality_labels": {
+  "audio": true,
+  "video": true
+ },
+ "modify_type": "both_modified",
+ "n_frames": 471,
+ "proposal": {
+  "end_f": 129,
+  "end_s": 5.2,
+  "interval_semantics": "inclusive frames; half-open seconds",
+  "iou": 0.7804873585700989,
+  "rank": 0,
+  "score": 1.5558315155208757,
+  "start_f": 122,
+  "start_s": 4.88
+ },
+ "schema_version": 1,
+ "score_groups": [
+  "cos",
+  "ja_B",
+  "jv_B",
+  "sync",
+  "vart_C",
+  "aart_C"
+ ],
+ "selection_origin": {
+  "artifact_release": "final-x3-ext-ref-figure-inputs-v1",
+  "batch": 7,
+  "minimum_genuine_flank_s": 0.0,
+  "nonperfect_iou_only": true,
+  "sample": "split_03",
+  "seed": "supp-score-split-forgery-v1",
+  "selection_query": {
+   "count": 3,
+   "ground_truth_count": 2,
+   "maximum_top1_iou": 1.0,
+   "minimum_genuine_flank_s": 0.0,
+   "minimum_ground_truth_s": 0.3,
+   "minimum_top1_iou": 0.5,
+   "modify_type": "both_modified",
+   "name": "split_forgery_two_intervals_v2",
+   "require_proposal_in_view": true
+  },
+  "top1_iou": 0.7804873585700989
+ },
+ "selection_query": {
+  "count": 3,
+  "ground_truth_count": 2,
+  "maximum_top1_iou": 1.0,
+  "minimum_genuine_flank_s": 0.0,
+  "minimum_ground_truth_s": 0.3,
+  "minimum_top1_iou": 0.5,
+  "modify_type": "both_modified",
+  "name": "split_forgery_two_intervals_v2",
+  "require_proposal_in_view": true
+ },
+ "selection_rule": "explicit clip identity",
+ "selection_seed": "supp-score-split-forgery-v1",
+ "source_media_sha256": "9bc3f8158e0d35247444186bedd85cc3af75569ba5692486fba661acacb266e0",
+ "status": "gallery case carried onto a nominated release by clip identity",
+ "id": "split_03",
+ "method": "C22",
+ "video_id": "id01960/OxaJUiDsMu8/00192/fake_video_fake_audio.mp4"
+}

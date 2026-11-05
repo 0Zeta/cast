@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cast"
+version = "0.1.0"
+description = "CAST: genuine-reference audio-visual temporal forgery localization and detection"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy==2.2.6",
+    "pandas==2.3.3",
+    "scipy==1.16.3",
+]
+
+[project.optional-dependencies]
+# cache and corpus construction; choose the index of your accelerator
+cache = ["torch==2.9.1"]
+figures = ["typst==0.15.0", "pypdfium2==5.14.0", "Pillow==13.0.0", "matplotlib==3.10.7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

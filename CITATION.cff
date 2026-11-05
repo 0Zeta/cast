@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "CAST: audio-visual temporal forgery localization without training on deepfakes"
+type: software
+authors:
+  - family-names: Schnack
+    given-names: Lucas
+  - family-names: Hunecke
+    given-names: Florian
+  - family-names: Georgescu
+    given-names: Mariana-Iuliana
+  - family-names: Ionescu
+    given-names: Radu Tudor
+  - family-names: Koepke
+    given-names: A. Sophia
+preferred-citation:
+  type: conference-paper
+  title: "Audio-Visual Temporal Forgery Localization without Training on Deepfakes"
+  authors:
+    - family-names: Schnack
+      given-names: Lucas
+    - family-names: Hunecke
+      given-names: Florian
+    - family-names: Georgescu
+      given-names: Mariana-Iuliana
+    - family-names: Ionescu
+      given-names: Radu Tudor
+    - family-names: Koepke
+      given-names: A. Sophia
+  conference:
+    name: "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"
+  year: 2027

@@ -1,0 +1,62 @@
+{
+  "audio_model": "vits_word",
+  "clip_scores": {
+    "p_final_mix": 5.5495865267433065e-05,
+    "px_final_mix": 0.0005704506560182544,
+    "s_clip": 18.527051003731597
+  },
+  "container_duration_s": 6.8,
+  "display_window_s": {
+    "end": 4.266666666666667,
+    "start": 3.0533333333333332
+  },
+  "duration_s": 6.8,
+  "fps": 25.0,
+  "genuine_flanks_s": {
+    "after": 2.88,
+    "before": 3.4
+  },
+  "ground_truth": {
+    "end_s": 3.92,
+    "interval_semantics": "half-open seconds",
+    "n_intervals": 1,
+    "start_s": 3.4
+  },
+  "ground_truth_intervals": [
+    {
+      "end_s": 3.92,
+      "start_s": 3.4
+    }
+  ],
+  "logical_video_id": "id08701/BK0NqHQvtwc/00141/real_video_fake_audio.mp4",
+  "modality_labels": {
+    "audio": true,
+    "video": false
+  },
+  "modify_type": "audio_modified",
+  "n_frames": 170,
+  "proposal": {
+    "end_f": 98,
+    "end_s": 3.96,
+    "interval_semantics": "inclusive frames; half-open seconds",
+    "iou": 0.9285714626312256,
+    "rank": 0,
+    "score": 2.298757698512894,
+    "start_f": 85,
+    "start_s": 3.4
+  },
+  "schema_version": 1,
+  "score_groups": [
+    "cos",
+    "ja_B",
+    "jv_B",
+    "sync",
+    "vart_C",
+    "aart_C"
+  ],
+  "id": "audio-only_02",
+  "video_id": "id08701/BK0NqHQvtwc/00141/real_video_fake_audio.mp4",
+  "method": "C22",
+  "boundary_curve": "boundary_curve.csv",
+  "boundary_peaks": "boundary_peaks.csv"
+}

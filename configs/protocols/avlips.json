@@ -1,0 +1,93 @@
+{
+  "name": "avlips",
+  "references": [
+    {
+      "title": "Audio-Visual Temporal Forgery Localization without Training on Deepfakes",
+      "file": "CITATION.cff",
+      "role": "method"
+    },
+    {
+      "title": "Lips Are Lying: Spotting the Temporal Inconsistency between Audio and Visual in Lip-Syncing DeepFakes",
+      "url": "https://arxiv.org/abs/2401.15668",
+      "role": "dataset"
+    }
+  ],
+  "population": {
+    "dataset": "AVLips",
+    "split": "transfer",
+    "selection": "All 7,602 numbered clips enumerated from the released 0_real and 1_fake directories, followed by score-cache availability selection."
+  },
+  "preprocessing": {
+    "encoders": [
+      "large_vox_iter5.pt",
+      "self_large_vox_433h.pt"
+    ],
+    "audio_sample_rate": 16000,
+    "max_frames": 750,
+    "leading_silence_trim": false,
+    "trim_order": "cap"
+  },
+  "fitting": {
+    "reference_source": "AV-Deepfake1M genuine training clips after source-speaker exclusion",
+    "partition": "Three speaker-disjoint fitting, calibration, and fusion pools.",
+    "ranker_training_data": "Controlled-corruption corpus built from genuine AV-Deepfake1M training sources.",
+    "fusion_split": "2:1:1 over the fusion pool, using recorded clip sampling identities."
+  },
+  "inputs": {
+    "base_dir": "${CAST_WORK_DIR}",
+    "scores_main": "scores/avlips_main.npz",
+    "scores_sync": "scores/avlips_sync.npz",
+    "scores_avsr": "scores/avlips_avsr.npz",
+    "scores_artifact": "scores/avlips_artifact.npz",
+    "labels_csv": "manifests/avlips.csv",
+    "ref_scores_main": "scores/avdeepfake1m_reference_main.npz",
+    "ref_scores_sync": "scores/avdeepfake1m_reference_sync.npz",
+    "ref_scores_avsr": "scores/avdeepfake1m_reference_avsr.npz",
+    "ref_scores_artifact": "scores/avdeepfake1m_reference_artifact.npz",
+    "ref_labels_csv": "manifests/avdeepfake1m_reference.csv",
+    "ref_exclude_csv": "manifests/reference_exclusion.csv",
+    "self_splice_corpus": "models/self_splice_corpus.npz",
+    "out_dir": "runs/avlips",
+    "main_groups": [
+      "cross_modal_agreement"
+    ],
+    "avsr_groups": [
+      "audio_side_avsr_agreement",
+      "video_side_avsr_agreement"
+    ],
+    "artifact_groups": [
+      "visual_artifact_score",
+      "audio_artifact_score"
+    ],
+    "sync_groups": [
+      "synchrony_residual"
+    ],
+    "missing_rows": "skip"
+  },
+  "config": "configs/method.json",
+  "ranking": {
+    "ranker": "models/proposal_ranker_avdeepfake1m_external_reference.json",
+    "proposals": "proposals_learned_rescored.csv"
+  },
+  "evaluation": {
+    "detection": {
+      "unit": "clip",
+      "resampling": "multinomial",
+      "seed": 1,
+      "batch_size": 128
+    },
+    "localization": false,
+    "views": {},
+    "metrics": {
+      "detection": [
+        "roc_auc",
+        "average_precision",
+        "eer",
+        "tpr_at_fpr",
+        "fpr_at_tpr",
+        "exact_rank_rates"
+      ],
+      "localization": []
+    }
+  }
+}

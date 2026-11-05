@@ -1,0 +1,255 @@
+{
+  "baseline": {
+    "protocol": "avdeepfake1m_external_reference"
+  },
+  "arms": {
+    "without_cross_modal_agreement": {
+      "inputs": {
+        "main_groups": []
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_audio_side_avsr_agreement": {
+      "inputs": {
+        "avsr_groups": [
+          "video_side_avsr_agreement"
+        ]
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_video_side_avsr_agreement": {
+      "inputs": {
+        "avsr_groups": [
+          "audio_side_avsr_agreement"
+        ]
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_visual_artifact_score": {
+      "inputs": {
+        "artifact_groups": [
+          "audio_artifact_score"
+        ]
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_audio_artifact_score": {
+      "inputs": {
+        "artifact_groups": [
+          "visual_artifact_score"
+        ]
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_synchrony_residual": {
+      "inputs": {
+        "sync_groups": []
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_cross_modal_agreement_and_synchrony_residual": {
+      "inputs": {
+        "main_groups": [],
+        "sync_groups": []
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_avsr_agreement_groups": {
+      "inputs": {
+        "avsr_groups": []
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_artifact_score_groups": {
+      "inputs": {
+        "artifact_groups": []
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_scalar_energy_channels": {
+      "config": {
+        "scan": {
+          "scalar_channels": [
+            "drop",
+            "edge",
+            "step_contrast"
+          ]
+        }
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_scalar_drop_channels": {
+      "config": {
+        "scan": {
+          "scalar_channels": [
+            "energy",
+            "edge",
+            "step_contrast"
+          ]
+        }
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_scalar_edge_channels": {
+      "config": {
+        "scan": {
+          "scalar_channels": [
+            "energy",
+            "drop",
+            "step_contrast"
+          ]
+        }
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_scalar_step_contrast_channels": {
+      "config": {
+        "scan": {
+          "scalar_channels": [
+            "energy",
+            "drop",
+            "edge"
+          ]
+        }
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_synchrony_energy_channel": {
+      "config": {
+        "scan": {
+          "multivariate_channels": [
+            "edge"
+          ]
+        }
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_synchrony_edge_channel": {
+      "config": {
+        "scan": {
+          "multivariate_channels": [
+            "energy"
+          ]
+        }
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "pooled_baseline_instead_of_clip_specific": {
+      "config": {
+        "scan": {
+          "clip_baseline": "pooled"
+        }
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "equal_weight_candidate_fusion": {
+      "config": {
+        "scan": {
+          "candidate_fusion": "equal"
+        }
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "without_frame_evidence_contrast": {
+      "ranking": {
+        "proposals": "proposals_learned.csv",
+        "self_splice_proposals": "self_splice_proposals.csv"
+      },
+      "reuse_scan": true,
+      "fit_ranker": true
+    },
+    "without_rank_feature": {
+      "ranking": {
+        "features": [
+          "adjusted_score",
+          "audio_boundary_cue"
+        ]
+      },
+      "reuse_scan": true,
+      "fit_ranker": true
+    },
+    "without_adjusted_score_feature": {
+      "ranking": {
+        "features": [
+          "log1p_rank",
+          "audio_boundary_cue"
+        ]
+      },
+      "reuse_scan": true,
+      "fit_ranker": true
+    },
+    "without_audio_boundary_cue": {
+      "ranking": {
+        "features": [
+          "log1p_rank",
+          "adjusted_score"
+        ]
+      },
+      "reuse_scan": true,
+      "fit_ranker": true
+    },
+    "without_proposal_ranker": {
+      "ranking": {
+        "ranker": "configs/ablations/score_order_ranker.json"
+      },
+      "reuse_scan": true,
+      "fit_ranker": false
+    }
+  },
+  "variants": {
+    "with_clip_gate": {
+      "ranking": {
+        "clip_gate": 0.5
+      },
+      "reuse_scan": true,
+      "fit_ranker": false
+    }
+  },
+  "cumulative": {
+    "agreement_only": {
+      "inputs": {
+        "avsr_groups": [],
+        "artifact_groups": [],
+        "sync_groups": []
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "plus_avsr_agreement": {
+      "inputs": {
+        "artifact_groups": [],
+        "sync_groups": []
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "plus_artifact_scores": {
+      "inputs": {
+        "sync_groups": []
+      },
+      "reuse_scan": false,
+      "fit_ranker": true
+    },
+    "full_method": {
+      "reuse_scan": true,
+      "fit_ranker": false
+    }
+  }
+}

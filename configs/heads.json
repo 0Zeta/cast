@@ -1,0 +1,16 @@
+{
+  "seed": 0,
+  "learning_rate": 3e-4,
+  "steps_align": 3000,
+  "steps_ref": 3000,
+  "steps_pred": 5000,
+  "batch_size": 48,
+  "window_frames": 160,
+  "validation_batches": 20,
+  "pca_train_batches": 60,
+  "pca_validation_batches": 15,
+  "prediction_validation_batches": 15,
+  "epochs": 8,
+  "preload": true,
+  "augment": false
+}

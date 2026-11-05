@@ -1,0 +1,51 @@
+{
+  "object": "max_duration_frames",
+  "supervision_level": "genuine-derived",
+  "training_population": "interior inter-pausal units of the same VoxCeleb2-dev sample and clip filter as the duration law: 433 units over 194 clips",
+  "fit": {
+    "rule": "max_duration_frames = p99 of genuine INTERIOR inter-pausal-unit durations in frames at 25 fps; an IPU is a maximal run of aligned words with successive inter-word gap < 200 ms",
+    "p99_frames": 126.93,
+    "max_duration_frames": 127,
+    "n_units": 433,
+    "n_clips": 194,
+    "p99_ci": [
+      102.49999999999999,
+      138.40525
+    ],
+    "pause_ms": 200.0,
+    "pause_sensitivity": [
+      [
+        100.0,
+        614,
+        110.76500000000006
+      ],
+      [
+        150.0,
+        503,
+        113.96000000000002
+      ],
+      [
+        250.0,
+        363,
+        130.09999999999997
+      ],
+      [
+        300.0,
+        286,
+        138.8249999999999
+      ],
+      [
+        500.0,
+        106,
+        227.30000000000007
+      ]
+    ],
+    "registered_band": [
+      60,
+      250
+    ],
+    "bootstrap_resamples": 2000,
+    "bootstrap_seed": 0,
+    "min_content_words": 5
+  }
+}

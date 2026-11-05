@@ -1,0 +1,73 @@
+{
+  "evaluation": {
+    "ap_iou_thresholds": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.75,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "ar_iou_grid": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "ar_proposal_counts": [
+      50,
+      30,
+      20,
+      10,
+      5,
+      2,
+      1
+    ],
+    "bootstrap_resamples": 20000,
+    "bootstrap_seed": 1,
+    "confidence_level": 0.95
+  },
+  "execution": {
+    "nproc": 8,
+    "seed": 0
+  },
+  "ranking": {
+    "min_proposal_width": 3
+  },
+  "scan": {
+    "candidate_fusion": "learned",
+    "clip_baseline": "clip_specific",
+    "clip_min_references": 50,
+    "edge_margin_frames": 8,
+    "guard_band_frames": 0,
+    "insertion_rate": 0.05,
+    "max_duration_frames": 127,
+    "min_cell_references": 100,
+    "min_interval_frames": 25,
+    "min_tail_exceedances": 30,
+    "multivariate_channels": [
+      "energy",
+      "edge"
+    ],
+    "n_folds": 4,
+    "nms_iou": 0.5,
+    "scalar_channels": [
+      "energy",
+      "drop",
+      "edge",
+      "step_contrast"
+    ],
+    "top_k": 50
+  }
+}

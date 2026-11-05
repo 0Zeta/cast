@@ -1,0 +1,170 @@
+{
+  "name": "avdeepfake1m_plus_four_fold",
+  "references": [
+    {
+      "title": "Audio-Visual Temporal Forgery Localization without Training on Deepfakes",
+      "file": "CITATION.cff",
+      "role": "method"
+    },
+    {
+      "title": "AV-Deepfake1M++: A Large-Scale Audio-Visual Deepfake Benchmark with Real-World Perturbations",
+      "url": "https://arxiv.org/abs/2507.20579",
+      "role": "dataset"
+    },
+    {
+      "title": "AV-Deepfake1M benchmark evaluator",
+      "url": "https://github.com/ControlNet/AV-Deepfake1M#sdk",
+      "role": "benchmark_evaluation"
+    },
+    {
+      "title": "GEM-TFL: Bridging Weak and Full Supervision for Forgery Localization through EM-Guided Decomposition and Temporal Refinement",
+      "url": "https://arxiv.org/abs/2603.05095",
+      "role": "localization_comparison"
+    }
+  ],
+  "population": {
+    "dataset": "AV-Deepfake1M++",
+    "split": "validation",
+    "selection": "Scored audiovisual clips; complete localization also includes unscored validation rows.",
+    "sampling_identity": "configs/cohorts/avdeepfake1m_plus_sampling_identity.csv.gz"
+  },
+  "preprocessing": {
+    "encoders": [
+      "large_vox_iter5.pt",
+      "self_large_vox_433h.pt"
+    ],
+    "audio_sample_rate": 16000,
+    "max_frames": 750,
+    "leading_silence_trim": false,
+    "trim_order": "cap"
+  },
+  "fitting": {
+    "reference_source": "AV-Deepfake1M++ genuine validation clips",
+    "partition": "For evaluation fold i: fitting=(i+1)%4, calibration=(i+2)%4, fusion=(i+3)%4.",
+    "ranker_training_data": "Controlled-corruption corpus built from genuine AV-Deepfake1M training sources.",
+    "fusion_split": "2:1:1 over the fusion pool, using recorded clip sampling identities."
+  },
+  "inputs": {
+    "base_dir": "${CAST_WORK_DIR}",
+    "scores_main": "scores/avdeepfake1m_plus_validation_main.npz",
+    "scores_sync": "scores/avdeepfake1m_plus_validation_sync.npz",
+    "scores_avsr": "scores/avdeepfake1m_plus_validation_avsr.npz",
+    "scores_artifact": "scores/avdeepfake1m_plus_validation_artifact.npz",
+    "labels_csv": "manifests/avdeepfake1m_plus_validation.csv",
+    "self_splice_corpus": "models/self_splice_corpus.npz",
+    "out_dir": "runs/avdeepfake1m_plus_four_fold",
+    "main_groups": [
+      "cross_modal_agreement"
+    ],
+    "avsr_groups": [
+      "audio_side_avsr_agreement",
+      "video_side_avsr_agreement"
+    ],
+    "artifact_groups": [
+      "visual_artifact_score",
+      "audio_artifact_score"
+    ],
+    "sync_groups": [
+      "synchrony_residual"
+    ],
+    "missing_rows": "skip"
+  },
+  "config": "configs/method.json",
+  "ranking": {
+    "ranker": "models/proposal_ranker_avdeepfake1m_plus_four_fold.json",
+    "proposals": "proposals_learned_rescored.csv"
+  },
+  "evaluation": {
+    "labels": "manifests/avdeepfake1m_plus_validation.csv",
+    "detection": {
+      "unit": "speaker",
+      "resampling": "multinomial",
+      "seed": 1,
+      "batch_size": 128,
+      "strata": [
+        "modify_type",
+        "source"
+      ]
+    },
+    "localization": {
+      "unscored": "exclude",
+      "frame_rate": "constant",
+      "unit": "speaker",
+      "complete": true,
+      "complete_labels": "manifests/avdeepfake1m_plus_complete.csv",
+      "strata": [
+        "modify_type",
+        "source"
+      ]
+    },
+    "views": {
+      "benchmark": {
+        "ap_iou_thresholds": [
+          0.5,
+          0.75,
+          0.9,
+          0.95
+        ],
+        "ar_iou_grid": [
+          0.5,
+          0.55,
+          0.6,
+          0.65,
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "ar_proposal_counts": [
+          50,
+          30,
+          20,
+          10,
+          5
+        ]
+      },
+      "comparison": {
+        "ap_iou_thresholds": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7
+        ],
+        "ar_iou_grid": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7
+        ],
+        "ar_proposal_counts": [
+          20,
+          10,
+          5,
+          2
+        ]
+      }
+    },
+    "metrics": {
+      "detection": [
+        "roc_auc",
+        "average_precision",
+        "eer",
+        "tpr_at_fpr",
+        "fpr_at_tpr",
+        "exact_rank_rates"
+      ],
+      "localization": [
+        "average_precision",
+        "average_recall"
+      ]
+    }
+  }
+}

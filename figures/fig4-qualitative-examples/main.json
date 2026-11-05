@@ -1,0 +1,46 @@
+{
+  "style": {
+    "track_height_mm": 7.6,
+    "panel_gap_mm": 2.0
+  },
+  "panels": [
+    {
+      "case": "visual-only_02",
+      "letter": "a",
+      "title": "Visual-only manipulation",
+      "media": [
+        "video"
+      ],
+      "scores": [
+        "sync",
+        "ja_B"
+      ],
+      "proposals": 1,
+      "frame_layout": [
+        2,
+        5,
+        2
+      ]
+    },
+    {
+      "case": "audio-only_02",
+      "letter": "b",
+      "title": "Audio-only manipulation",
+      "media": [
+        "audio"
+      ],
+      "scores": [
+        "aart_C",
+        "flux"
+      ],
+      "proposals": 1,
+      "frame_layout": [
+        2,
+        5,
+        2
+      ],
+      "flux_markers": true
+    }
+  ],
+  "paper_figure": "4"
+}

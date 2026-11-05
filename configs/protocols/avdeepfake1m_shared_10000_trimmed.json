@@ -1,0 +1,105 @@
+{
+  "name": "avdeepfake1m_shared_10000_trimmed",
+  "references": [
+    {
+      "title": "Audio-Visual Temporal Forgery Localization without Training on Deepfakes",
+      "file": "CITATION.cff",
+      "role": "method"
+    },
+    {
+      "title": "AV-Deepfake1M: A Large-Scale LLM-Driven Audio-Visual Deepfake Dataset",
+      "url": "https://arxiv.org/abs/2311.15308",
+      "role": "dataset"
+    },
+    {
+      "title": "Circumventing Shortcuts in Audio-Visual Deepfake Detection Datasets with Unsupervised Learning",
+      "url": "https://arxiv.org/abs/2412.00175",
+      "role": "matched_comparison"
+    },
+    {
+      "title": "Generalizing Video Deepfake Detection by Self-Generated Audio-Visual Pseudo-Fakes",
+      "url": "https://arxiv.org/abs/2604.09110",
+      "role": "matched_comparison"
+    }
+  ],
+  "population": {
+    "dataset": "AV-Deepfake1M",
+    "split": "validation",
+    "selection": "The fixed shared 10,000-clip AVH-Align/AVPF list with compatible score caches.",
+    "sampling_identity": "configs/cohorts/avdeepfake1m_sampling_identity.csv.gz",
+    "cohort_file": "configs/cohorts/avdeepfake1m_avh_align_avpf_10000.csv.gz"
+  },
+  "preprocessing": {
+    "encoders": [
+      "large_vox_iter5.pt",
+      "self_large_vox_433h.pt"
+    ],
+    "audio_sample_rate": 16000,
+    "max_frames": 750,
+    "leading_silence_trim": true,
+    "trim_order": "cap_then_trim"
+  },
+  "fitting": {
+    "reference_source": "AV-Deepfake1M genuine training clips after source-speaker exclusion",
+    "partition": "Three speaker-disjoint fitting, calibration, and fusion pools.",
+    "ranker_training_data": "Controlled-corruption corpus built from genuine AV-Deepfake1M training sources.",
+    "fusion_split": "2:1:1 over the fusion pool, using recorded clip sampling identities."
+  },
+  "inputs": {
+    "base_dir": "${CAST_WORK_DIR}",
+    "scores_main": "scores/avdeepfake1m_shared_10000_trimmed_main.npz",
+    "scores_sync": "scores/avdeepfake1m_shared_10000_trimmed_sync.npz",
+    "scores_avsr": "scores/avdeepfake1m_shared_10000_trimmed_avsr.npz",
+    "scores_artifact": "scores/avdeepfake1m_shared_10000_trimmed_artifact.npz",
+    "labels_csv": "manifests/avdeepfake1m_shared_10000.csv",
+    "ref_scores_main": "scores/avdeepfake1m_reference_main.npz",
+    "ref_scores_sync": "scores/avdeepfake1m_reference_sync.npz",
+    "ref_scores_avsr": "scores/avdeepfake1m_reference_avsr.npz",
+    "ref_scores_artifact": "scores/avdeepfake1m_reference_artifact.npz",
+    "ref_labels_csv": "manifests/avdeepfake1m_reference.csv",
+    "ref_exclude_csv": "manifests/reference_exclusion.csv",
+    "self_splice_corpus": "models/self_splice_corpus.npz",
+    "out_dir": "runs/avdeepfake1m_shared_10000_trimmed",
+    "main_groups": [
+      "cross_modal_agreement"
+    ],
+    "avsr_groups": [
+      "audio_side_avsr_agreement",
+      "video_side_avsr_agreement"
+    ],
+    "artifact_groups": [
+      "visual_artifact_score",
+      "audio_artifact_score"
+    ],
+    "sync_groups": [
+      "synchrony_residual"
+    ],
+    "missing_rows": "skip"
+  },
+  "config": "configs/method.json",
+  "ranking": {
+    "ranker": "models/proposal_ranker_avdeepfake1m_external_reference.json",
+    "proposals": "proposals_learned_rescored.csv"
+  },
+  "evaluation": {
+    "detection": {
+      "unit": "speaker",
+      "resampling": "index",
+      "seed": 0,
+      "batch_size": 64
+    },
+    "localization": false,
+    "views": {},
+    "metrics": {
+      "detection": [
+        "roc_auc",
+        "average_precision",
+        "eer",
+        "tpr_at_fpr",
+        "fpr_at_tpr",
+        "exact_rank_rates"
+      ],
+      "localization": []
+    }
+  }
+}

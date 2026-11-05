@@ -1,0 +1,893 @@
+{
+  "dataset": "AV-Deepfake1M",
+  "protocol": "four_fold",
+  "localization": {
+    "evaluator": {
+      "ap_thresholds": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.75,
+        0.8,
+        0.9,
+        0.95
+      ],
+      "ar_budgets": [
+        50,
+        30,
+        20,
+        10,
+        5,
+        2,
+        1
+      ],
+      "ar_definition": "mean recall over ar_iou_grid at each proposal budget",
+      "ar_iou_grid": [
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95
+      ],
+      "arithmetic": "official_f32_unrolled_v1",
+      "avg_map": "mean of AP@0.1 through AP@0.7",
+      "iou_rule": "continuous seconds-domain IoU; strict > comparison"
+    },
+    "overall": {
+      "point": {
+        "ap@0.1": 0.6460258364677429,
+        "ap@0.2": 0.6006456613540649,
+        "ap@0.3": 0.5557610392570496,
+        "ap@0.4": 0.49971580505371094,
+        "ap@0.5": 0.4273606836795807,
+        "ap@0.6": 0.338063508272171,
+        "ap@0.7": 0.20230978727340698,
+        "ap@0.75": 0.13153164088726044,
+        "ap@0.8": 0.07294825464487076,
+        "ap@0.9": 0.007726835086941719,
+        "ap@0.95": 0.0007727902848273516,
+        "ar@1": 0.22226600348949432,
+        "ar@10": 0.4481441080570221,
+        "ar@2": 0.30314281582832336,
+        "ar@20": 0.47932901978492737,
+        "ar@30": 0.48426833748817444,
+        "ar@5": 0.3940715193748474,
+        "ar@50": 0.48437684774398804,
+        "avg_map_0107": 0.46712604590824675
+      },
+      "population": {
+        "n_clips": 57315
+      }
+    },
+    "strata": {
+      "available": false,
+      "reason": "no stratified localization panel is registered for this protocol"
+    },
+    "uncertainty": {
+      "confidence_level": 0.95,
+      "interval_type": "percentile",
+      "marginal": {
+        "ap@0.1": {
+          "hi": 0.6502898260951042,
+          "lo": 0.641824297606945,
+          "n": 20000,
+          "point": 0.6460258364677429,
+          "sd": 0.0021509365458473556
+        },
+        "ap@0.2": {
+          "hi": 0.6052007764577866,
+          "lo": 0.5962123483419418,
+          "n": 20000,
+          "point": 0.6006456613540649,
+          "sd": 0.0022844564976760504
+        },
+        "ap@0.3": {
+          "hi": 0.5605160385370255,
+          "lo": 0.5511615529656411,
+          "n": 20000,
+          "point": 0.5557610392570496,
+          "sd": 0.002370231370279091
+        },
+        "ap@0.4": {
+          "hi": 0.5048090904951096,
+          "lo": 0.49489532187581065,
+          "n": 20000,
+          "point": 0.49971580505371094,
+          "sd": 0.0025389926194742973
+        },
+        "ap@0.5": {
+          "hi": 0.43269872218370437,
+          "lo": 0.4222422517836094,
+          "n": 20000,
+          "point": 0.4273606836795807,
+          "sd": 0.002663383938212402
+        },
+        "ap@0.6": {
+          "hi": 0.3432827636599541,
+          "lo": 0.3330510824918747,
+          "n": 20000,
+          "point": 0.338063508272171,
+          "sd": 0.0025986189624638543
+        },
+        "ap@0.7": {
+          "hi": 0.2068109344691038,
+          "lo": 0.19800729788839816,
+          "n": 20000,
+          "point": 0.20230978727340698,
+          "sd": 0.002232962866919239
+        },
+        "ap@0.75": {
+          "hi": 0.13529003262519837,
+          "lo": 0.12801424264907837,
+          "n": 20000,
+          "point": 0.13153164088726044,
+          "sd": 0.0018605676435009687
+        },
+        "ap@0.8": {
+          "hi": 0.07573264148086309,
+          "lo": 0.0704686377197504,
+          "n": 20000,
+          "point": 0.07294825464487076,
+          "sd": 0.0013410044591904556
+        },
+        "ap@0.9": {
+          "hi": 0.008392402366735042,
+          "lo": 0.0071718643768690525,
+          "n": 20000,
+          "point": 0.007726835086941719,
+          "sd": 0.0003111438956322103
+        },
+        "ap@0.95": {
+          "hi": 0.0009099602990318089,
+          "lo": 0.0006778528899303637,
+          "n": 20000,
+          "point": 0.0007727902848273516,
+          "sd": 5.9016384451135436e-05
+        },
+        "ar@1": {
+          "hi": 0.22532241456210614,
+          "lo": 0.21913446225225924,
+          "n": 20000,
+          "point": 0.22226600348949432,
+          "sd": 0.0015725581175027995
+        },
+        "ar@10": {
+          "hi": 0.4512967370450497,
+          "lo": 0.4449987970292568,
+          "n": 20000,
+          "point": 0.4481441080570221,
+          "sd": 0.0016147428359881712
+        },
+        "ar@2": {
+          "hi": 0.3063821837306023,
+          "lo": 0.2997998632490635,
+          "n": 20000,
+          "point": 0.30314281582832336,
+          "sd": 0.0016818216265015238
+        },
+        "ar@20": {
+          "hi": 0.48229035586118696,
+          "lo": 0.47636359333992007,
+          "n": 20000,
+          "point": 0.47932901978492737,
+          "sd": 0.0015211643531135618
+        },
+        "ar@30": {
+          "hi": 0.48724398016929626,
+          "lo": 0.48130885064601897,
+          "n": 20000,
+          "point": 0.48426833748817444,
+          "sd": 0.0015215044396295876
+        },
+        "ar@5": {
+          "hi": 0.3974342070519924,
+          "lo": 0.39071386829018595,
+          "n": 20000,
+          "point": 0.3940715193748474,
+          "sd": 0.001716713974002145
+        },
+        "ar@50": {
+          "hi": 0.48733723908662796,
+          "lo": 0.48141842186450956,
+          "n": 20000,
+          "point": 0.48437684774398804,
+          "sd": 0.001518493399160706
+        },
+        "avg_map_0107": {
+          "hi": 0.47139914748924117,
+          "lo": 0.46309768850249905,
+          "n": 20000,
+          "point": 0.46712604590824675,
+          "sd": 0.002110384691236582
+        }
+      },
+      "n_clusters": 1656,
+      "n_registered": 20000,
+      "n_resamples": 20000,
+      "numpy_method": "linear",
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "resampling": "speaker cluster via cast.eval.bootstrap.speaker_cluster_key",
+      "scope": "pointwise marginal",
+      "sd_ddof": 0,
+      "seed": 1,
+      "simultaneous": false
+    }
+  },
+  "detection": {
+    "overall": {
+      "attrition": {
+        "expected_by_target": {
+          "0": 14235,
+          "1": 43105
+        },
+        "missing_by_modify_type": {
+          "audio_modified": 10,
+          "both_modified": 7,
+          "real": 6,
+          "visual_modified": 2
+        },
+        "missing_by_target": {
+          "0": 6,
+          "1": 19
+        },
+        "n_expected": 57340,
+        "n_missing": 25,
+        "n_scored": 57315,
+        "scored_by_target": {
+          "0": 14229,
+          "1": 43086
+        }
+      },
+      "definition": "all scored protocol clips",
+      "exact_rank_rates": {
+        "0.01": {
+          "fpr": {
+            "k": 81,
+            "n": 14229,
+            "point": 0.0056925996204933585,
+            "population": "real",
+            "wilson95": [
+              0.004582817486456722,
+              0.007069219728655684
+            ]
+          },
+          "tpr": {
+            "k": 14955,
+            "n": 43086,
+            "point": 0.3470965046650884,
+            "population": "fake",
+            "wilson95": [
+              0.34261523441516706,
+              0.35160503860621256
+            ]
+          }
+        },
+        "0.05": {
+          "fpr": {
+            "k": 666,
+            "n": 14229,
+            "point": 0.04680581910183428,
+            "population": "real",
+            "wilson95": [
+              0.04345581492175805,
+              0.050400467438610534
+            ]
+          },
+          "tpr": {
+            "k": 28975,
+            "n": 43086,
+            "point": 0.6724922248526204,
+            "population": "fake",
+            "wilson95": [
+              0.6680456024599818,
+              0.6769080907557298
+            ]
+          }
+        },
+        "0.1": {
+          "fpr": {
+            "k": 1389,
+            "n": 14229,
+            "point": 0.09761754164031204,
+            "population": "real",
+            "wilson95": [
+              0.09284887432568925,
+              0.10260342382958568
+            ]
+          },
+          "tpr": {
+            "k": 33531,
+            "n": 43086,
+            "point": 0.7782342292159866,
+            "population": "fake",
+            "wilson95": [
+              0.7742867722109417,
+              0.7821320752419578
+            ]
+          }
+        }
+      },
+      "population": {
+        "n_expected": 57340,
+        "n_fake": 43086,
+        "n_missing": 25,
+        "n_real": 14229,
+        "n_scored": 57315
+      },
+      "primary_auc_uncertainty": {
+        "ci95": [
+          0.9150029758208844,
+          0.9202776656624222
+        ],
+        "n_degenerate": 0,
+        "n_effective": 20000,
+        "n_registered": 20000,
+        "point": 0.9176769775591329,
+        "sd": 0.0013470936309376443
+      },
+      "primary_metrics": {
+        "average_precision": 0.9712186320712902,
+        "definition": "EER uses the empirical ROC point minimizing |FPR-FNR|; operating points use max TPR at FPR<=alpha and min FPR at TPR>=target. Descriptive only; no evaluation-selected F1/accuracy.",
+        "eer": 0.15839489792999303,
+        "eer_fnr": 0.1583809125934178,
+        "eer_fpr": 0.15840888326656827,
+        "eer_pvalue_threshold": 0.150773029367286,
+        "eer_score_threshold": 1.8919796897534746,
+        "fpr_at_tpr": {
+          "0.9": 0.26706022910956495,
+          "0.95": 0.43734626467074283
+        },
+        "tpr_at_fpr": {
+          "0.01": 0.4524903681010073,
+          "0.05": 0.6839344566680592,
+          "0.1": 0.7806015875226292
+        }
+      }
+    },
+    "strata": {
+      "modify_type": {}
+    },
+    "bootstrap": {
+      "draw_scope": "one protocol-level multinomial stream shared by all panels",
+      "joint_draws": true,
+      "n_boot": 20000,
+      "n_groups": 1656,
+      "seed": 1,
+      "statistic": "ROC-AUC of -log(p_final_mix)",
+      "unit": "speaker cluster via cast.eval.bootstrap.speaker_cluster_key"
+    }
+  },
+  "views": {
+    "figure_3_complete_scan_calibration": {
+      "curve": [
+        {
+          "alpha": 0.0,
+          "rate": 0.0,
+          "rejections": 0
+        },
+        {
+          "alpha": 0.001,
+          "rate": 0.0,
+          "rejections": 0
+        },
+        {
+          "alpha": 0.002,
+          "rate": 0.0,
+          "rejections": 0
+        },
+        {
+          "alpha": 0.003,
+          "rate": 0.000773069084,
+          "rejections": 11
+        },
+        {
+          "alpha": 0.004,
+          "rate": 0.000773069084,
+          "rejections": 11
+        },
+        {
+          "alpha": 0.005,
+          "rate": 0.002319207253,
+          "rejections": 33
+        },
+        {
+          "alpha": 0.006,
+          "rate": 0.003232834352,
+          "rejections": 46
+        },
+        {
+          "alpha": 0.007,
+          "rate": 0.00421674046,
+          "rejections": 60
+        },
+        {
+          "alpha": 0.008,
+          "rate": 0.004919530536,
+          "rejections": 70
+        },
+        {
+          "alpha": 0.009,
+          "rate": 0.00569259962,
+          "rejections": 81
+        },
+        {
+          "alpha": 0.01,
+          "rate": 0.006395389697,
+          "rejections": 91
+        },
+        {
+          "alpha": 0.011,
+          "rate": 0.008082085881,
+          "rejections": 115
+        },
+        {
+          "alpha": 0.012,
+          "rate": 0.008855154965,
+          "rejections": 126
+        },
+        {
+          "alpha": 0.013,
+          "rate": 0.008855154965,
+          "rejections": 126
+        },
+        {
+          "alpha": 0.014,
+          "rate": 0.010401293134,
+          "rejections": 148
+        },
+        {
+          "alpha": 0.015,
+          "rate": 0.012579942371,
+          "rejections": 179
+        },
+        {
+          "alpha": 0.016,
+          "rate": 0.013353011455,
+          "rejections": 190
+        },
+        {
+          "alpha": 0.017,
+          "rate": 0.01440719657,
+          "rejections": 205
+        },
+        {
+          "alpha": 0.018,
+          "rate": 0.01440719657,
+          "rejections": 205
+        },
+        {
+          "alpha": 0.019,
+          "rate": 0.014969428632,
+          "rejections": 213
+        },
+        {
+          "alpha": 0.02,
+          "rate": 0.015109986647,
+          "rejections": 215
+        },
+        {
+          "alpha": 0.021,
+          "rate": 0.015531660693,
+          "rejections": 221
+        },
+        {
+          "alpha": 0.022,
+          "rate": 0.016585845808,
+          "rejections": 236
+        },
+        {
+          "alpha": 0.023,
+          "rate": 0.016585845808,
+          "rejections": 236
+        },
+        {
+          "alpha": 0.024,
+          "rate": 0.017148077869,
+          "rejections": 244
+        },
+        {
+          "alpha": 0.025,
+          "rate": 0.017921146953,
+          "rejections": 255
+        },
+        {
+          "alpha": 0.026,
+          "rate": 0.019115890084,
+          "rejections": 272
+        },
+        {
+          "alpha": 0.027,
+          "rate": 0.020943144283,
+          "rejections": 298
+        },
+        {
+          "alpha": 0.028,
+          "rate": 0.021435097336,
+          "rejections": 305
+        },
+        {
+          "alpha": 0.029,
+          "rate": 0.023192072528,
+          "rejections": 330
+        },
+        {
+          "alpha": 0.03,
+          "rate": 0.023894862605,
+          "rejections": 340
+        },
+        {
+          "alpha": 0.031,
+          "rate": 0.025089605735,
+          "rejections": 357
+        },
+        {
+          "alpha": 0.032,
+          "rate": 0.026354627873,
+          "rejections": 375
+        },
+        {
+          "alpha": 0.033,
+          "rate": 0.028181882072,
+          "rejections": 401
+        },
+        {
+          "alpha": 0.034,
+          "rate": 0.030149694286,
+          "rejections": 429
+        },
+        {
+          "alpha": 0.035,
+          "rate": 0.030852484363,
+          "rejections": 439
+        },
+        {
+          "alpha": 0.036,
+          "rate": 0.031203879401,
+          "rejections": 444
+        },
+        {
+          "alpha": 0.037,
+          "rate": 0.032890575585,
+          "rejections": 468
+        },
+        {
+          "alpha": 0.038,
+          "rate": 0.036545083983,
+          "rejections": 520
+        },
+        {
+          "alpha": 0.039,
+          "rate": 0.036545083983,
+          "rejections": 520
+        },
+        {
+          "alpha": 0.04,
+          "rate": 0.03816150116,
+          "rejections": 543
+        },
+        {
+          "alpha": 0.041,
+          "rate": 0.039075128259,
+          "rejections": 556
+        },
+        {
+          "alpha": 0.042,
+          "rate": 0.040199592382,
+          "rejections": 572
+        },
+        {
+          "alpha": 0.043,
+          "rate": 0.043291868719,
+          "rejections": 616
+        },
+        {
+          "alpha": 0.044,
+          "rate": 0.043291868719,
+          "rejections": 616
+        },
+        {
+          "alpha": 0.045,
+          "rate": 0.043713542765,
+          "rejections": 622
+        },
+        {
+          "alpha": 0.046,
+          "rate": 0.044627169864,
+          "rejections": 635
+        },
+        {
+          "alpha": 0.047,
+          "rate": 0.047719446201,
+          "rejections": 679
+        },
+        {
+          "alpha": 0.048,
+          "rate": 0.047930283224,
+          "rejections": 682
+        },
+        {
+          "alpha": 0.049,
+          "rate": 0.048703352309,
+          "rejections": 693
+        },
+        {
+          "alpha": 0.05,
+          "rate": 0.05017921147,
+          "rejections": 714
+        },
+        {
+          "alpha": 0.051,
+          "rate": 0.051444233607,
+          "rejections": 732
+        },
+        {
+          "alpha": 0.052,
+          "rate": 0.052428139715,
+          "rejections": 746
+        },
+        {
+          "alpha": 0.053,
+          "rate": 0.052779534753,
+          "rejections": 751
+        },
+        {
+          "alpha": 0.054,
+          "rate": 0.054887904983,
+          "rejections": 781
+        },
+        {
+          "alpha": 0.055,
+          "rate": 0.055098742006,
+          "rejections": 784
+        },
+        {
+          "alpha": 0.056,
+          "rate": 0.055590695059,
+          "rejections": 791
+        },
+        {
+          "alpha": 0.057,
+          "rate": 0.057699065289,
+          "rejections": 821
+        },
+        {
+          "alpha": 0.058,
+          "rate": 0.060158830557,
+          "rejections": 856
+        },
+        {
+          "alpha": 0.059,
+          "rate": 0.061634689718,
+          "rejections": 877
+        },
+        {
+          "alpha": 0.06,
+          "rate": 0.062196921779,
+          "rejections": 885
+        },
+        {
+          "alpha": 0.061,
+          "rate": 0.062969990864,
+          "rejections": 896
+        },
+        {
+          "alpha": 0.062,
+          "rate": 0.064445850025,
+          "rejections": 917
+        },
+        {
+          "alpha": 0.063,
+          "rate": 0.065921709185,
+          "rejections": 938
+        },
+        {
+          "alpha": 0.064,
+          "rate": 0.067397568346,
+          "rejections": 959
+        },
+        {
+          "alpha": 0.065,
+          "rate": 0.067608405369,
+          "rejections": 962
+        },
+        {
+          "alpha": 0.066,
+          "rate": 0.068451753461,
+          "rejections": 974
+        },
+        {
+          "alpha": 0.067,
+          "rate": 0.070630402699,
+          "rejections": 1005
+        },
+        {
+          "alpha": 0.068,
+          "rate": 0.072246819875,
+          "rejections": 1028
+        },
+        {
+          "alpha": 0.069,
+          "rate": 0.072668493921,
+          "rejections": 1034
+        },
+        {
+          "alpha": 0.07,
+          "rate": 0.074566027128,
+          "rejections": 1061
+        },
+        {
+          "alpha": 0.071,
+          "rate": 0.074917422166,
+          "rejections": 1066
+        },
+        {
+          "alpha": 0.072,
+          "rate": 0.075549933235,
+          "rejections": 1075
+        },
+        {
+          "alpha": 0.073,
+          "rate": 0.076744676365,
+          "rejections": 1092
+        },
+        {
+          "alpha": 0.074,
+          "rate": 0.076814955373,
+          "rejections": 1093
+        },
+        {
+          "alpha": 0.075,
+          "rate": 0.077939419495,
+          "rejections": 1109
+        },
+        {
+          "alpha": 0.076,
+          "rate": 0.078220535526,
+          "rejections": 1113
+        },
+        {
+          "alpha": 0.077,
+          "rate": 0.079063883618,
+          "rejections": 1125
+        },
+        {
+          "alpha": 0.078,
+          "rate": 0.080328905756,
+          "rejections": 1143
+        },
+        {
+          "alpha": 0.079,
+          "rate": 0.081875043924,
+          "rejections": 1165
+        },
+        {
+          "alpha": 0.08,
+          "rate": 0.083983414154,
+          "rejections": 1195
+        },
+        {
+          "alpha": 0.081,
+          "rate": 0.084897041254,
+          "rejections": 1208
+        },
+        {
+          "alpha": 0.082,
+          "rate": 0.086372900415,
+          "rejections": 1229
+        },
+        {
+          "alpha": 0.083,
+          "rate": 0.086654016445,
+          "rejections": 1233
+        },
+        {
+          "alpha": 0.084,
+          "rate": 0.087637922553,
+          "rejections": 1247
+        },
+        {
+          "alpha": 0.085,
+          "rate": 0.090589640874,
+          "rejections": 1289
+        },
+        {
+          "alpha": 0.086,
+          "rate": 0.091503267974,
+          "rejections": 1302
+        },
+        {
+          "alpha": 0.087,
+          "rate": 0.092346616066,
+          "rejections": 1314
+        },
+        {
+          "alpha": 0.088,
+          "rate": 0.092346616066,
+          "rejections": 1314
+        },
+        {
+          "alpha": 0.089,
+          "rate": 0.093681917211,
+          "rejections": 1333
+        },
+        {
+          "alpha": 0.09,
+          "rate": 0.094665823319,
+          "rejections": 1347
+        },
+        {
+          "alpha": 0.091,
+          "rate": 0.094736102326,
+          "rejections": 1348
+        },
+        {
+          "alpha": 0.092,
+          "rate": 0.095579450418,
+          "rejections": 1360
+        },
+        {
+          "alpha": 0.093,
+          "rate": 0.095930845456,
+          "rejections": 1365
+        },
+        {
+          "alpha": 0.094,
+          "rate": 0.097968936679,
+          "rejections": 1394
+        },
+        {
+          "alpha": 0.095,
+          "rate": 0.099936748893,
+          "rejections": 1422
+        },
+        {
+          "alpha": 0.096,
+          "rate": 0.100428701947,
+          "rejections": 1429
+        },
+        {
+          "alpha": 0.097,
+          "rate": 0.100428701947,
+          "rejections": 1429
+        },
+        {
+          "alpha": 0.098,
+          "rate": 0.101061213016,
+          "rejections": 1438
+        },
+        {
+          "alpha": 0.099,
+          "rate": 0.102255956146,
+          "rejections": 1455
+        },
+        {
+          "alpha": 0.1,
+          "rate": 0.10394265233,
+          "rejections": 1479
+        }
+      ],
+      "definition": "empirical rejection rate of the calibrated complete-scan p-value on held-out genuine clips",
+      "distinction": "these complete-scan rates are not the final detector exact-rank rates under detection.overall",
+      "metric": "rejections / n_genuine",
+      "n_genuine": 14229,
+      "realized_fpr": {
+        "0.01": 0.0063953896970974766,
+        "0.05": 0.05017921146953405,
+        "0.10": 0.1039426523297491
+      },
+      "rejection_rule": "exact learned-scan rank <= alpha"
+    }
+  }
+}

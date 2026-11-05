@@ -1,0 +1,14 @@
+{
+  "name": "GEM-TFL",
+  "dataset": "AV-Deepfake1M",
+  "citation": {
+    "key": "zhu2026gemtfl",
+    "title": "GEM-TFL: Bridging Weak and Full Supervision for Forgery Localization through EM-Guided Decomposition and Temporal Refinement",
+    "url": "https://arxiv.org/html/2603.05095v1#S4.T2",
+    "table": 2,
+    "scope": "Published weakly supervised audiovisual comparator; values transcribed as fractions."
+  },
+  "ar_iou_grid": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
+  "ap": [[0.1, 0.658], [0.2, 0.581], [0.3, 0.523], [0.4, 0.449], [0.5, 0.389], [0.6, 0.264], [0.7, 0.122]],
+  "ar": [[2, 0.564], [5, 0.589], [10, 0.602], [20, 0.637]]
+}

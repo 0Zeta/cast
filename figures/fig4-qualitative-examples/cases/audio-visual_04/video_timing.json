@@ -1,0 +1,27 @@
+{
+  "probe": {
+    "format": {
+      "duration": "17.590000",
+      "size": "2957411"
+    },
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "avg_frame_rate": "25/1",
+        "codec_name": "h264",
+        "codec_type": "video",
+        "height": 720,
+        "width": 1280
+      },
+      {
+        "avg_frame_rate": "0/0",
+        "codec_name": "aac",
+        "codec_type": "audio"
+      }
+    ]
+  },
+  "real_time_repetitions": 1,
+  "schema_version": 1,
+  "slow_motion_factor": 0.5
+}

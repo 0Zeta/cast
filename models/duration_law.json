@@ -1,0 +1,47 @@
+{
+  "object": "content_word_duration_law",
+  "supervision_level": "genuine-derived",
+  "training_population": "VoxCeleb2-dev genuine-speech sample, speaker-disjoint from the evaluation split by construction: 336 clips / 2960 content-word tokens",
+  "fit": {
+    "rule": "mu, sigma = mean, std (ddof 0) of log(duration_frames) over content-word tokens at 25 fps; cap = floor(p99) of the same durations",
+    "mu": 2.0931324952258556,
+    "sigma": 0.5914898984029745,
+    "p99_frames": 33.30749999999989,
+    "cap_frames": 33,
+    "n_clips": 336,
+    "n_words": 2960,
+    "mu_ci": [
+      2.0598749641488276,
+      2.1278150027866047
+    ],
+    "sigma_ci": [
+      0.559057355326751,
+      0.6263245454489264
+    ],
+    "p99_ci": [
+      29.5,
+      41.0
+    ],
+    "fit_quotation_4dp": {
+      "mu": 2.0931,
+      "sigma": 0.5915,
+      "max_frames": 33
+    },
+    "deployed_constants": {
+      "mu": 2.093,
+      "sigma": 0.592,
+      "max_frames": 33
+    },
+    "bootstrap_resamples": 2000,
+    "bootstrap_seed": 0,
+    "min_content_words": 5,
+    "non_lexical_labels": [
+      "",
+      "<eps>",
+      "<unk>",
+      "sil",
+      "sp",
+      "spn"
+    ]
+  }
+}

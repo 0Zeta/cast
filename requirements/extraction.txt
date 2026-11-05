@@ -1,0 +1,9 @@
+numpy==1.23.5
+scipy==1.15.3
+dlib==20.0.1
+scikit-image==0.21.0
+python-speech-features==0.6
+PyYAML==6.0.2
+antlr4-python3-runtime==4.8
+omegaconf==2.0.6
+hydra-core==1.0.7

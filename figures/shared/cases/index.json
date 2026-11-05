@@ -1,0 +1,47 @@
+{
+  "method": "C22",
+  "cases": [
+    {
+      "id": "audio-visual_01",
+      "video_id": "id00945/K6b69erklJY/00065/fake_video_fake_audio.mp4",
+      "data": "../../fig4-qualitative-examples/cases/audio-visual_01/data",
+      "paper_figure": "S4"
+    },
+    {
+      "id": "audio-visual_04",
+      "video_id": "id08581/dM1u9Xnw6Zs/00092/fake_video_fake_audio.mp4",
+      "data": "../../fig4-qualitative-examples/cases/audio-visual_04/data",
+      "paper_figure": "S5"
+    },
+    {
+      "id": "audio-only_02",
+      "video_id": "id08701/BK0NqHQvtwc/00141/real_video_fake_audio.mp4",
+      "data": "../../fig4-qualitative-examples/cases/audio-only_02/data",
+      "paper_figure": "S6"
+    },
+    {
+      "id": "visual-only_02",
+      "video_id": "id07695/5xg6sV5zXVE/00014/fake_video_real_audio.mp4",
+      "data": "../../fig4-qualitative-examples/cases/visual-only_02/data",
+      "paper_figure": "S7"
+    },
+    {
+      "id": "split_01",
+      "video_id": "id00829/_tF0kVlEmjI/00266/fake_video_fake_audio.mp4",
+      "data": "../../fig4-qualitative-examples/cases/split_01/data",
+      "paper_figure": "S8"
+    },
+    {
+      "id": "split_03",
+      "video_id": "id01960/OxaJUiDsMu8/00192/fake_video_fake_audio.mp4",
+      "data": "../../fig4-qualitative-examples/cases/split_03/data",
+      "paper_figure": "S9"
+    },
+    {
+      "id": "audio-visual_09",
+      "video_id": "id03677/jXMVoKH1CJE/00141/fake_video_fake_audio.mp4",
+      "data": "../../fig4-qualitative-examples/cases/audio-visual_09/data",
+      "paper_figure": "S10"
+    }
+  ]
+}

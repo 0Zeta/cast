@@ -1,0 +1,24 @@
+[
+  {
+    "id": "audio-only-example",
+    "video_id": "avdeepfake1m/val/id08701/BK0NqHQvtwc/00141/real_video_fake_audio.mp4",
+    "crop": [
+      3.05,
+      4.26
+    ],
+    "selected_tracks": [
+      "cos",
+      "sync",
+      "aart_C",
+      "flux"
+    ],
+    "media": {
+      "video": true,
+      "audio": true
+    },
+    "modality_labels": {
+      "video": false,
+      "audio": true
+    }
+  }
+]

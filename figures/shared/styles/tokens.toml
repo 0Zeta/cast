@@ -1,0 +1,43 @@
+schema_version = 1
+
+[fonts]
+qualitative = "Liberation Serif"
+text = "Nimbus Roman"
+math = "Latin Modern Math"
+
+[type_pt]
+title = 9.5
+body = 8.0
+compact = 7.0
+
+[colors]
+white = "#ffffff"
+ink = "#263746"
+soft = "#6f7c87"
+line = "#bcc6ce"
+track_background = "#eef3f6"
+scalar = "#0072b2"
+vector = "#4c6faf"
+ground_truth = "#d84f4f"
+proposal = "#0072b2"
+reference = "#7f8b94"
+
+[stroke_pt]
+hairline = 0.25
+outline = 0.50
+signal = 0.70
+proposal = 0.85
+separator = 0.60
+forged_edge = 1.80
+
+[spacing_mm]
+panel_gap = 1.6
+track_gap = 0.8
+corner_radius = 0.75
+
+[qualitative]
+width_mm = 174.625
+label_width_mm = 25.0
+label_gap_mm = 1.5
+text_pt = 8.3
+track_height_mm = 8.0
